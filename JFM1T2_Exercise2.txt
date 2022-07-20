@@ -1,0 +1,252 @@
+JFM1T2_Exercise2
+--------------------------------------------------------------
+Arithmetic_Operators
+--------------------------------------------------------------
+public class Arithmetic_Operator {
+    
+	public static void main(String args[])
+	{
+		// Variable declaration and initialization for x,y
+		int x=10;
+		int y=20;
+		
+		// Variable declaration for z to store the result
+		int z; 
+		
+		// Performing Arithmetic Operation addition on x and y and storing the result in z 
+		z=x+y;
+		
+		// Printing the result a meaningful way in console
+		System.out.println("Sum of two numbers "+ x +" and "+y+" is "+z);
+	}
+
+}
+
+-------------------------------------------------------------
+Assignment_Operator
+-------------------------------------------------------------
+//Java Program to illustrate Assignment Operator
+
+public class Assignment_Operator{   
+	
+    public static void main(String args[]) 
+    {
+		 //Variables Definition and Initialization
+        int x=10;
+        String str = "bitLabs";
+        
+        //Printing the values of both the variables in Console
+         System.out.println(x);
+         System.out.println(str);
+    }
+}  
+
+--------------------------------------------------------------
+Bitwise_Operator
+--------------------------------------------------------------
+public class Bitwise_Operator { 
+
+    public static void main(String[] args)  { 
+        
+        //Variable declaration and initialization
+        int a = 5; 
+        int b = 7; 
+
+        // Bitwise AND will work on internal bit pattern of 5 & 7 here i.e., 00000101 & 00000111 
+        System.out.println("a&b = " + (a & b)); 
+
+        // Bitwise OR 00000101 | 00000111 = 00000111 = 7 
+        System.out.println("a|b = " + (a | b));
+    
+    } 
+} 
+
+--------------------------------------------------------------
+Exercise1
+--------------------------------------------------------------
+// Write a program to print the remainder when x is divided by y where x=100 and y=4
+
+class Exercise1 {
+  public static void main(String[] args){
+    //Given x=100 and y=4
+    
+    int x=100,y=4;
+    
+    System.out.println("Remainder when "+ x +" divisible by "+ y +" is = "+ (x%y));
+  }
+}
+
+---------------------------------------------------------------
+Exercise2
+---------------------------------------------------------------
+// Write a program to solve the expression w=(x*y)/z with any input values for x,y and z
+
+class Exercise2 {
+  public static void main(String[] args){
+    //Since any input values for x, y and z I will take x=2 , y=100 and z=4
+    int x = 2;
+    int y = 100;
+    int z = 4;
+    
+    //expression w = (x*y)/z
+    int w = (x*y)/z;
+    //Output
+    System.out.println("w = "+ w );
+  }
+}
+
+---------------------------------------------------------------
+Exercise3
+---------------------------------------------------------------
+// Write a program to initialize your marks for 3 subjects and print the highest marks
+
+class Exercise3 {
+  public static void main(String[] args){
+    //Initializing marks
+    int maths_marks = 92;
+    int science_marks = 90;
+    int social_marks = 85;
+    
+    //Printing Highest marks
+    System.out.println("Highest marks = "+ maths_marks);
+  }
+}
+
+---------------------------------------------------------------
+Exercise4
+----------------------------------------------------------------
+// Write a program to perform bitwise AND and OR operation on x=10 and y=20
+
+class Exercise4{
+  public static void main(String[] args){
+    //Given x=10 and y=20
+    int x=10,y=20;
+    //bitwise AND
+    System.out.println("Bitwise AND for x and y is: "+ (x&y));
+    
+    //bitwise OR
+    System.out.println("Bitwise OR for x and y is:"+ (x|y));
+    
+  }
+}
+
+-----------------------------------------------------------------
+Exercise5
+-----------------------------------------------------------------
+// Write a program to perform bitwise Left shift(<<) and right shift(>>) operation on x=10 and y=20
+
+class Exercise5 {
+  public static void main(String[] args){
+    //To perform bitwise right shift and left shift operation
+    int x=10, y=20;
+    //bitwise right shift(>>)
+    System.out.println("Bitwise right shift for x and y is: "+ (x>>y));
+
+    //bitwise left shift(<<)
+    System.out.println("Bitwise left shift for x and y is: "+ (x<<y));
+  }
+}
+
+----------------------------------------------------------------
+LogicalOperator
+----------------------------------------------------------------
+public class Logical_Operator{
+    
+ public static void main(String[] args) {
+     
+  //Variables Definition and Initialization
+  boolean bool1 = true;
+  boolean bool2 = false;
+  
+  //Logical AND
+  System.out.println("bool1 && bool2 = " + (bool1 && bool2));
+  
+  //Logical OR
+  System.out.println("bool1 || bool2 = " + (bool1 || bool2));
+  
+  //Logical NOT
+  System.out.println("!bool2 = " + !bool2 );
+  
+  }
+}
+
+----------------------------------------------------------------
+RelationalOperator
+----------------------------------------------------------------
+public class Relational_Operator {
+    
+    public static void main(String[] args) {
+     
+  //Variables Definition and Initialization
+  
+  int x = 7;
+  int y = 4;
+
+  //Comparision for equality
+  System.out.println("x == y = " + (x == y) );
+
+  //Greater than
+  System.out.println("x >  y = " + (x >  y) );        
+  
+  //Less than
+  System.out.println("x < y = " + (x<y));
+
+    }
+}
+
+-----------------------------------------------------------------
+Sample1
+-----------------------------------------------------------------
+// Complete the execute the java Program for Logical Operators
+public class Sample1{
+    
+ public static void main(String[] args) {
+     
+  //Variables Definition and Initialization
+  boolean x = true;
+  boolean y = false;
+  
+  //Logical AND
+  System.out.println("x&&y = " + (x&&y));
+  
+  //Logical OR
+  System.out.println("x||y = "+ (x||y));
+  
+  //Write Logical NOT for x in println statement below
+  System.out.println("!x = "+ !x);
+  
+  }
+}
+
+-------------------------------------------------------------------
+Sample2
+-------------------------------------------------------------------
+// Complete and execute java Program using Ternary operator to check your eligibility to vote
+public class Sample2 {
+    public static void main (String args[]) {
+        // Variable declaration & initialization
+        int age =20;
+        // Using Ternary operator having three operands 
+        String result = (age>=18) ? "Eligible" : "Not Eligible";
+        //Print the result below 
+        System.out.println("Result : "+ result);
+    }
+}
+
+--------------------------------------------------------------------
+TernaryOperator
+--------------------------------------------------------------------
+public class Ternary_Operator {
+    
+    public static void main (String args[]) {
+        
+        // Variable declaration & initialization
+        int x =10;
+        
+        // Using Ternary operator having three operands 
+        String result = (x<15) ? "small" : "huge";
+        
+        // Printing the result "small" as x<15 condition is true
+        System.out.println(result);
+    }
+}
