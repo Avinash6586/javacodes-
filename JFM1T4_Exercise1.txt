@@ -1,0 +1,292 @@
+JFM1T4_Exercise1
+==============================================================================
+ConditionalDemo
+==============================================================================
+// Java Program to demonstrate simple if statement
+
+class ConditionalDemo {
+    
+ public static void main(String args[]) {
+
+    // Initializing variables
+    int x = 20;
+    int y = 18;
+
+    //Checking condition x>y with if statement
+    if (x > y) {  
+      System.out.println("x is greater than y");
+    }
+ }
+}
+
+===============================================================================
+Exercise1
+===============================================================================
+/* Write a program to check whether a number is positive or negative
+Test Data 1: x=31
+Expected Output: Number is positive
+Test Data 2: x=-31
+Expected Output: Number is negative
+*/
+import java.util.Scanner;
+
+class Exercise1 {
+
+	public static void main(String args[]) {
+    //Initializing variable
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter value:");
+    int a = sc.nextInt();
+    //Checking whether the number is positive or negative
+    if(a>0){
+      System.out.println(a+" is positive");
+    }
+    else{
+      System.out.println(a+ " is negative");
+    }
+    sc.close();
+	}
+}
+
+==================================================================================
+Exercise2
+==================================================================================
+/* Write a program to find number of days in a month
+Test Data: 
+month number=2
+year=2020
+Expected Output: February 2020 has 29 days
+*/
+import java.util.Scanner;
+class Exercise2 {
+
+	public static void main(String args[]) {
+    //Initializing month number and year
+    Scanner sc = new Scanner(System.in);
+    System.out.println("month number:");
+    int month = sc.nextInt();
+    System.out.println("Enter year:");
+    int year = sc.nextInt();
+    //Output
+    switch(month){
+      case 1:
+        System.out.println("January "+year+" has 31 days");
+        break;
+      
+      case 2:
+        if((year%4)==0){
+          System.out.println("February "+year+" has 29 days");
+        }
+        else{
+          System.out.println("February "+year+" has 28 days");
+        }
+        break;
+
+      case 3:
+        System.out.println("March "+year+" has 31 days");
+        break;
+
+      case 4:
+        System.out.println("April "+year+" has 30 days");
+        break;
+
+      case 5:
+        System.out.println("May "+year+" has 31 days");
+        break;
+
+      case 6:
+        System.out.println("June "+year+" has 30 days");
+        break;
+
+      case 7:
+        System.out.println("July "+year+" has 31 days");
+        break;
+
+      case 8:
+        System.out.println("August "+year+" has 31 days");
+        break;
+
+      case 9:
+        System.out.println("September "+year+" has 30 days");
+        break;
+
+      case 10:
+        System.out.println("October "+year+" has 31 days");
+        break;
+
+      case 11:
+        System.out.println("November "+year+" has 30 days");
+        break;
+
+      case 12:
+        System.out.println("December "+year+" has 31 days");
+        break;
+
+      default:
+        System.out.println("No match found");
+        break;
+    }
+	}
+}
+
+===================================================================================
+GradeSystem
+===================================================================================
+//Java program to learn about using if - else if - else 
+
+public class GradeSystem {
+	public static void main(String args[])
+	{
+		// Declaring and initializing marks variable.You can change the marks value and test your program again
+		int marks=84;
+		
+		//For Excellent grade, marks must be >=85 and <=100, that's why Logical AND(&&) is used to combine 			the condition
+		if(marks>=85 && marks<=100)
+			System.out.println("Grade=Excellent");
+
+		//For Very Good grade, marks must be >=70 and <85, and so on
+		else if(marks>=70 && marks<85)
+			System.out.println("Grade=Very Good");
+
+		else if(marks>=50 && marks<70)
+			System.out.println("Grade=Good");
+
+		else if(marks>0 && marks<50)
+			System.out.println("Not Qualified");
+
+		// else will be execute if marks don't lie in any of the above conditions
+		else
+			System.out.println("Irrelevant Input");
+	}
+}
+
+============================================================================================
+Sample1
+============================================================================================
+// Complete and execute java Program for checking the number of digits in a number
+class Sample1 {
+
+	public static void main(String args[]) {
+		int num =123;// you can also change the value to test the output
+		
+		if(num<99) {
+	  		System.out.println("Its a two digit number");
+		}
+		else if(num<999) {
+	  		System.out.println("Its a three digit number");
+		}
+		else if(num<9999) {
+	  		System.out.println("Its a four digit number");
+		}
+		else if(num<99999) {
+	  		System.out.println("Its a five digit number");			
+		}
+		else {
+	  		System.out.println("number is not between 1 & 99999");			
+		}
+   	}
+}
+
+========================================================================================
+Sample2
+========================================================================================
+// Complete and execute java Program for making a simple calculator using switch case
+class Sample2 {
+
+	public static void main(String args[]) {
+
+    		//Intialize the char variable below with operators (+, -, *, /) one by one and check the output
+    		char operator = '+';
+    		
+		int first=10,second=5,result;
+
+    		switch (operator) {
+      		case '+':
+        	//Write code to perform addition of first and second
+            result = first + second;
+            System.out.println(first + " " + operator + " " + second + " = " + result);
+            break;
+
+      		case '-':
+        	//Write code to perform subtraction 
+            result = first-second;
+            System.out.println(first + " " + operator + " " + second + " = " + result);
+            break;
+            
+      		case '*':
+        	//Write code to perform multiplication
+            result = first*second;
+            System.out.println(first + " " + operator + " " + second + " = " + result);
+            break;
+            
+      		case '/':
+        	//Write code to perform division
+            result = first/second;
+            System.out.println(first + " " + operator + " " + second + " = " + result);
+            break;
+      		//If operator doesn't match any case constant (+, -, *, /)
+      		default:
+        	// Print Error stating operator is not correct
+            System.out.println("Error! stating operator is not correct");
+            break;
+    		}
+  	}
+}
+
+==================================================================================================
+SimpleIfElse
+==================================================================================================
+// Java Program to demonstrate simple if-else statement
+
+public class SimpleIfElse {
+  public static void main(String[] args) {
+	
+	// Variable "time" declaration and initialization  
+	int time = 20;
+
+	// Checking the time with if 
+	if (time < 18) {
+	// Printing "Good Day" if time < 18
+		System.out.println("Good day.");
+	} 
+	else {
+	// Printing "Good evening" if time > 18
+		System.out.println("Good evening.");
+	}
+ }
+}
+
+=====================================================================================
+SwitchDemo
+=====================================================================================
+// Java Program to rebuild the Grade System using Switch-Case
+
+public class SwitchDemo {
+	public static void main(String args[]) {
+		// Declaring and initializing marks variable.You can change marks and test your program again.
+		int marks=92;
+		// Dividing marks by 10 to limit the number of cases 
+		marks=marks/10;
+		// Enclosing marks in switch expression to check against matching case.
+		
+		switch(marks) {
+		    
+		    // More than one case may be written together if the under-statement is common
+		    case 9:
+		    case 8:
+		    System.out.println("Grade=Excellent");
+		    // Every case must be terminated by a break statement
+		    break;
+		    case 7:
+			case 6:
+			System.out.println("Grade=Very Good");
+			break;
+			case 5:
+			System.out.println("Grade=Good");
+			break;
+			// default case is just like else with if i.e., optional
+			default:
+			System.out.println("Fail or Irrelevant Input");
+		}
+	}
+}

@@ -1,0 +1,91 @@
+JFM1T3_Exercise
+------------------------------------------------------------
+Exercise1
+------------------------------------------------------------
+// Write a program to initialize a char variable and then store it in an int variable. Print the int variable's value on console.
+
+class Exercise1 {
+	public static void main(String args[]) {
+		//Initializing a char variable
+	  char ch = 'a';
+
+    //Storing char variable into int variable
+    int i = ch;
+
+    //Output
+    System.out.println(i);
+	}
+
+}
+
+------------------------------------------------------------
+NarrowCasting
+------------------------------------------------------------
+// Java Program to demonstrate the concept of Narrowing Type-casting
+
+class NarrowCast {
+    
+	public static void main(String args[])
+	{
+		// Initializing variables radius and pie
+		int radius=3;
+		float pie=3.14f;
+		
+		//Calculating the area of the circle
+		float area=2*pie*radius;
+		
+		// Printing the floating point area value
+		System.out.println("Area of circle = "+ area);
+		
+		// Casting the floating point area value to int
+		int newarea=(int)area;
+		
+		// Printing the casted area value from float to int 
+		System.out.println("Area of circle = "+ newarea);
+	}
+
+}
+
+-----------------------------------------------------------------------
+Sample1
+-----------------------------------------------------------------------
+// Complete and execute java Program for Narrow/Explicit Type-casting
+
+class Sample1 {
+	public static void main(String args[])
+	{
+		// Initialize a variable to store your marks of Computer Science subject- out of 50
+		float cs_marks = 48.5f;
+		// Calculate the percentage of marks and store it in a float variable
+		float percentage = (cs_marks*100)/50;
+    System.out.println(percentage);
+		// Cast the percentage to int(whole number, decimal points removed)
+		int newpercentage = (int)percentage;
+		// Print the casted percentage
+		System.out.println("Percentage of marks in CS = "+ newpercentage);
+	}
+
+}
+
+-------------------------------------------------------------------------
+WidenCast
+--------------------------------------------------------------------------
+// Java Program to demonstrate Widening/Automatic Type-casting
+
+public class WidenCast {
+    
+  public static void main(String[] args) {
+      
+	// Variable Declaration & Initialization
+    int myIntvar = 9;
+    
+  // Widening/Automatic casting: int to double
+    double myDoublevar = myIntvar; 
+    
+	// Printing the original value of myIntvar
+    System.out.println(myIntvar);      // Outputs 9
+
+	// Printing the casted value
+    System.out.println(myDoublevar);   // Outputs 9.0
+  }
+}

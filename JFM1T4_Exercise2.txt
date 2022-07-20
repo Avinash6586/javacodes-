@@ -1,0 +1,249 @@
+JFM1T4_Exercise2
+============================================================================
+Exercise1
+============================================================================
+// Write a program to print the sum of first 10 natural numbers
+
+class Exercise1 {
+
+	public static void main(String args[]) {
+    //Initializing the value
+    int sum=0,num=10;
+    //For loop
+    for(int i=0;i<=num;i++){
+      sum+=i;
+    }
+    System.out.println("The sum of first "+num+" natural numbers are:"+sum);
+	}
+
+}
+
+============================================================================
+Exercise2
+=============================================================================
+/* Write a program to print the following right angle traingle pattern:
+1
+22
+333
+4444
+55555
+*/
+class Exercise2 {
+
+	public static void main(String args[]) {
+    int i,j;
+    char c='1';
+    for(i=1;i<=5;i++){
+      for(j=1;j<=i;j++){
+        System.out.print(c);
+      }
+      c++;
+      System.out.println();
+    }
+	}
+}
+
+===========================================================================================
+Exercise3
+============================================================================================
+// Write a program to print the multiplication table of any number of your choice
+import java.util.Scanner;
+class Exercise3 {
+
+	public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number:");
+    int num = sc.nextInt();
+    //Printing the table using for loop
+    System.out.println("multiplication table of "+num+" is:");
+    for(int i=1;i<=10;i++){
+      System.out.println(num+"*"+i+"="+(num*i));
+    }
+    sc.close();
+	}
+}
+
+=============================================================================================
+Exercise4
+=============================================================================================
+/* Write a program to print the following equilateral traingle pattern:
+   *
+  ***
+ *****
+*******
+
+*/
+class Exercise4 {
+
+	public static void main(String args[]) {
+    int i,j,k;
+    for(i=1;i<=4;i++){
+      for(j=1;j<=4-i;j++){
+        System.out.print(" ");
+      }
+      for(k=1;k<=(2*i)-1;k++){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+	}
+}
+
+==============================================================================================
+ForExample
+==============================================================================================
+// Java Program to demonstrate for loop for printing even numbers
+
+public class ForExample {
+    
+  public static void main(String[] args) {
+      
+  //will only print even values between 0 and 10
+  
+	for(int i=0; i<=10; i=i+2) {
+		System.out.println(i);
+   }
+ }
+}
+
+=============================================================================================
+Pattern1
+=============================================================================================
+//Java program to demonstrate Nested Loops in Java for printing a Pattern.
+
+public class Pattern1 {
+    
+   public static void main( String arg[])
+	  {
+		// Declaring loop variables
+	     int i , k ;
+		// Outer loop for rows 
+	    for(i = 1 ; i<=5 ; i++)
+	    {  
+	    // Inner loop for columns
+	    	for(k = 1 ; k<=i ; k++)
+		   { 
+	    		System.out.print(k);
+		   }
+		// changing line at the end of each row to show the correct pattern
+	    System.out.println();
+	    }
+	}
+}
+
+==================================================================================================
+Sample1
+==================================================================================================
+//Complete and execute Java program to check whether a number is prime or not.
+
+class Sample1 {
+public static void main(String args[]) {
+// Variable Declarartion & Initialization n=97 and a Temporary variable c=0
+int n=97,c=0;
+
+// Run a for loop till half of the number 
+  for(int i=2;i<=n/2;i++){
+    if(n%i==0){
+      c+=1;
+    }
+  }
+	if(c==1)
+		System.out.println("Number is not Prime");
+
+	else
+		System.out.println("Number is Prime");
+ }
+}
+
+=============================================================================================
+Sample2
+==============================================================================================
+/*Complete and execute java program to print the following pattern-
+54321
+5432
+543
+54
+5
+*/
+public class Sample2 {
+    
+	public static void main( String arg[]) { 
+		// Declaring loop variables
+		int i , j ;
+		// Outer loop for rows 
+		for(i=1;i<=5;i++){
+      for(j=5;j>=i;j--){
+        System.out.print(j);
+      }
+      System.out.println();
+    }
+	}
+}
+
+===================================================================
+SimpleDoWhile
+===================================================================
+// Java Program to demonstrate Do while loop 
+
+public class SimpleDoWhile {
+    
+  public static void main(String[] args) {
+      
+  // Initializing the loop variable	  
+  int i = 0;
+  
+  do {
+	// Printing the value of i
+	System.out.println(i);
+	//Incrementing the value of i 
+	i++;
+  }
+  
+  // Checking the loop condition
+  while (i < 5);
+ }
+}
+
+======================================================================
+SimpleFor
+=======================================================================
+// Java Program to demonstrate simple for loop to print 10 numbers from 0 - 9
+
+public class SimpleFor {
+    
+  public static void main(String[] args) {
+      
+  // for (initialization; condition; increment) 
+  // Initialization takes place (one time) before the execution of the loop body
+  // Condition defines the test condition for executing the statements within loop body
+  // Increment/Decrement is executed (every time) after the loop body has been executed
+  // The code below will print the numbers 0 to 9  
+  
+	for(int x=0; x<10; x++){
+		System.out.println(x);
+  }
+ }
+}
+
+========================================================================
+SimpleWhile
+=========================================================================
+// Java Program to demonstrate while loop 
+
+public class SimpleWhile {
+    
+  public static void main(String[] args) {
+      
+    // Initializing the loop variable	  
+    int i = 0;
+    
+    // Checking the loop condition
+    while (i < 5) {
+    // Printing the value of i
+    System.out.println(i);
+    
+    //Incrementing the value of i 
+    i++;
+    }
+ }
+}
