@@ -1,0 +1,39 @@
+//JFM1T2_Exercise1
+______________________________________________________________
+Exercise1
+______________________________________________________________
+// Write a program to print your Name, Father's Name and Mailing Address in different lines
+
+class Exercise1 {
+  public static void main(String[] args){
+    System.out.println("My name is Avinash");
+    System.out.println("My father's name is Vijaya Babu");
+    System.out.println("My Mailing Address is: 17-5-3 Borra Balaiah street\nPurnanandampet,\nVijayawada");
+  }
+} 
+
+_______________________________________________________________
+Helloworld
+_______________________________________________________________
+//Simple HelloWorld program
+public class HelloWorld {
+	public static void main(String args[]) {
+		
+    System.out.println("HelloWorld");
+    
+	}
+}
+
+_______________________________________________________________
+Sample1
+_______________________________________________________________
+// Write a program to print your name
+
+public class Sample1 {
+
+	public static void main(String args[]) {
+
+	//Print your name in Console
+	  System.out.println("Hello Avinash");
+	}
+}
