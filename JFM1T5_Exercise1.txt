@@ -1,0 +1,131 @@
+JFM1T5_Exercise1
+
+===============================================================================================
+Array Demo
+===============================================================================================
+//Java program to demonstrate Single Dimensional Array in Java
+
+public class ArrayDemo {
+	// Array in method arguments can be denoted by 3 dots also
+	public static void main(String ...v)
+	{	
+	// Declaring and Creating an Array of length 7
+	//int arr[]=new int[7];
+	// Declaring and Initializing an Array. It initializes the length with number of elements i.e., 7 
+	int arr[]= {1,2,3,4,5,6,7};
+	
+	// Looping down the array
+	for(int i=0;i<arr.length;i++)
+	{
+	// Printing tlhe Array elements
+	System.out.println(arr[i]);
+	}
+  }
+}
+
+=================================================================================================
+Exercise 1
+==================================================================================================
+//  Write a program to print the elements of an array present on even position
+public class Exercise1 {
+
+	public static void main(String args[]){
+    //Initializing an array
+    int a[] = {1,2,3,4,5,6,7};
+    for(int i=0;i<a.length;i++){
+      if(a[i]%2!=0){
+        System.out.println(a[i]);
+      }
+    }
+		    
+   }
+}
+
+====================================================================================================
+Exercise 2
+====================================================================================================
+//  Write a program to create a two dimensional array with duplicate elements and print only the duplicate elements.
+public class Exercise2 {
+
+	public static void main(String args[]) {
+
+    int a[][] = {{1,1,2,2,3},{4,5,5,6,6},{7,8,8,9,9}};
+		int temp[][] = new int [10][10];
+		int i,j,k=0,l=0;
+		for(i=0;i<a.length;i++){
+		    for(j=0;j<a[i].length-1;j++){
+		        if(a[i][j]==a[i][j+1]){
+		            temp[k][l++]=a[i][j];
+		        }
+		    }
+		}
+		for(i=0;i<k+1;i++){
+		    for(j=0;j<l;j++){
+		        System.out.println(temp[i][j]);
+		    }
+		}
+   }
+}
+
+====================================================================================================
+Sample1
+====================================================================================================
+// Complete and execute java Program for finding smallest/minimum element in a single dimensional array
+class Sample1 {
+
+	public static void main(String args[]) {
+
+		//Initialize array  
+        	int [] arr = new int [] {25, 11, 7, 75, 56};  
+
+        	//Initialize min with first element of array.  
+        	int min = arr[0];  
+
+        	//Loop through the array  
+        	for (int i=1;i<arr.length;i++) {  
+
+            	//Compare elements of array with min  
+           	if(min>arr[i]){
+              min=arr[i];
+            }
+          }
+        System.out.println("Smallest element present in given array: " + min);  
+   }
+}
+
+===================================================================================================
+Sample 2
+===================================================================================================
+// Complete and execute java Program for transpose of a matrix/two dimensional array
+class Sample2 {
+
+	public static void main(String args[]) {
+
+		//creating a matrix  
+		int original[][]={{1,3,4},{2,4,3},{3,4,5}};    
+    
+		//creating another matrix to store transpose of a matrix  
+		int transpose[][]=new int[3][3];  //3 rows and 3 columns  
+    int i,j;
+		/*Write code to transpose a matrix
+		
+		Print matrix after transpose:
+		1 2 3 
+		3 4 4 
+		4 3 5 
+		
+		*/
+    for(i=0;i<original.length;i++){
+      for(j=0;j<original[i].length;j++){
+        transpose[j][i] = original[i][j];
+      }
+    }
+    System.out.println("Transpose of a matrix is:");
+    for(i=0;i<original.length;i++){
+      for(j=0;j<original[i].length;j++){
+        System.out.print(transpose[i][j]+" ");
+      }
+      System.out.println();
+    }
+   }
+}
