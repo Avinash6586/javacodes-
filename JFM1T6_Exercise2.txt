@@ -1,0 +1,95 @@
+JFM1T6_Exercise2
+=========================================================================================
+Exercise1
+===========================================================================================
+//  Write a java method that accepts two numbers as parameters and swap their values
+import java.util.Scanner;
+class Exercise1 {
+
+	public static void main(String args[]) {
+    //Using scanner class to take input for the two prameters;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter values:");
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    System.out.println("Before Swapping:");
+    System.out.println("a = "+a+" "+"b = "+b);
+    Exercise1 obj = new Exercise1();
+	//Call method
+    obj.swap(a,b);
+	}
+
+	// Define method
+  void swap(int c,int d){
+    int temp;
+    temp=c;
+    c=d;
+    d=temp;
+    System.out.println("After swapping:");
+    System.out.println("a = "+c+" "+"b = "+d);
+  }
+}
+
+===================================================================================================
+MethodDemo
+===================================================================================================
+// Java Program to add two numbers using a Method.
+
+import java.util.Scanner;
+
+public class MethodDemo {
+	public static void main(String args[])
+	{
+		// Creating Scanner class object to take two numbers input from console
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter First Number");
+		int firstnum=sc.nextInt();
+		System.out.println("Enter Second Number");
+		int secnum=sc.nextInt();
+		//Creating an object
+		MethodDemo obj=new MethodDemo();
+		//Calling method sum() using object and holding the result returned from method
+		int result=obj.sum(firstnum,secnum);
+		// Printing the result returned by the method
+		System.out.println("Result="+result);
+		sc.close();
+	}
+	// Method Definition: sum with two parameters
+	 int sum(int fnum, int snum)
+	{
+		// Returning the result sum to the calling main method
+		return(fnum+snum);
+	}
+}
+/*The Objective of this program is to learn defining and calling methods.
+Let's define a method named sum to add two numbers. 
+Here the sum method takes two numbers as parameters, add and return the result to the main method.
+Now let's see how to call a method. First taking two int numbers input from user through Scanner class
+Then we'll create the object of class and call the method 
+Final result could have been printed in sum method but approach used here is returning the result to main method and printing from there
+in console.  
+*/
+
+===================================================================================================
+Sample1
+===================================================================================================
+//  Complete and execute java program using method to calculate square of a number
+
+class Sample1 {
+
+// Create a method named square which accepts a number as parameter and returns square of that number
+  int square(int n){
+    return(n*n);
+  }
+ 
+  public static void main(String[] args) {
+    int result;
+
+    // call the method
+    Sample1 sam = new Sample1();
+    // store returned value to result
+    result = sam.square(10);
+
+    System.out.println("Squared value of 10 is: " + result);
+  }
+}

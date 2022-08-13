@@ -1,0 +1,115 @@
+JFMT1T6 Exercise3
+=======================================================================
+Exercise1
+=======================================================================
+//  Write a java class "Calculator" in package "calc" and access it's functionality(add,subtract,multiply and divide) from main class outside the package "calc"
+import calc.Calculator;
+import java.util.Scanner;
+class Exercise1 {
+  public static void main(String[] args){
+    Calculator c = new Calculator();
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a and b values:");
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    System.out.println(a+"+"+b+"="+c.addition(a,b));
+    c.subtraction(a,b);
+    System.out.println(a+"*"+b+"="+c.multiplication(a,b));
+    c.divide(a,b);
+  }
+	
+}
+	
+======================================================================================
+PackageImport
+======================================================================================
+// Java Program to demonstrate how to import package and it's class
+
+// Please follow the same steps as showed below or watch the Package video on LMS how to execute this program.
+
+import package2.PackageDemo1;
+
+public class PackageImport {
+  public static void main(String[] args) {
+  // Object creation of the public class PackageDemo imported from package1
+  PackageDemo1 p=new PackageDemo1();
+  // Calling public method sayHello defined in class PackageDemo imported from package1
+  p.sayHello();
+  }
+}
+===========
+PackageDemo
+===========
+//Java program to define user defined package
+
+package package2;
+
+public class PackageDemo1{
+  public void sayHello(){
+    System.out.println("Hello World");
+  }
+}
+=====================================================================================================
+Sample1
+=====================================================================================================
+//  Complete and execute java program example of using Scanner class
+import java.util.Scanner;
+class Sample1 {
+  public static void main(String[] args){
+	   
+          //Create Scanner object 
+        Scanner in = new Scanner(System.in);
+          System.out.println("--------Enter Your Details-------- ");  
+           
+          System.out.print("Enter your name: ");    
+          // Write java statement to input your name from console   
+          String name = in.nextLine();
+          System.out.println("Name: " + name);
+          System.out.print("Enter your age: ");  
+          // Write java statement to input your age from console 
+          int age = in.nextInt();
+          System.out.println("Age: " + age); 
+ 
+          System.out.print("Enter your marks: ");  
+          // Write java statement to input your marks from console
+          float marks = in.nextFloat();
+          System.out.println("Marks: " + marks);   
+      
+          in.close();           
+  }
+}
+
+============================================================================================
+Scanner Demo
+============================================================================================
+//Java program to learn about taking input from user using an inbuilt class java.util.Scanner
+
+import java.util.Scanner;
+
+public class ScannerDemo {
+	public static void main(String args[]) {
+	    
+		//Creating Object of Scanner
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter radius of a circle");
+		
+		//Taking radius input from user using inbuilt method nextFloat() of Scanner class
+		float radius = sc.nextFloat();
+		
+		// Calculating area of circle
+		float area=2*3.14f*radius;
+        
+        // Printing the area in console
+        System.out.println("Area="+area);
+
+	}
+}
+/*Objective of this java program is to learn about taking input from user using an inbuilt class java.util.Scanner. 
+First we import the inbuilt class that we require in the program. let's write import java.util.Scanner
+Then we write our class and main method
+To use the inbuilt class, let's create it's object - Scanner s=new Scanner(System.in)
+Now let's use nextFloat() method of Scanner class to take floating point value say radius input from user. 
+Other methods of Scanner are nextInt() for taking int, nextDouble() for taking double and nextLine() for string value as input from user in console.
+Here we are using user input value of radius to calculate the area of circle and printing it in console.
+*/
