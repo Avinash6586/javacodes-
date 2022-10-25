@@ -1,0 +1,233 @@
+JFM1T7_Exercise3
+
+============================================================================
+Constructor Input
+===============================================================================
+// Java Program to take input in Constructors using BufferedReader class
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+ public class ConstructorInput {
+    String x;
+	String y;
+	//BufferedReader object creation requires an InputStreamReader object as an argument/parameter
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    
+	 // Declare constructor that throws IOException to avoid errors while reading input
+	ConstructorInput()throws IOException {
+		System.out.println("Enter value for x");
+		// readline() method of BufferedReader is used for String input
+		x=br.readLine();
+		System.out.println("Enter value for y");
+		y=br.readLine();
+	}
+	//Instance method
+	public void display() {
+		System.out.println(x+" "+y);
+	}
+	// Main method also throws IOException as the constructor taking user input is invoked here
+	// Errors thrown are brought to the calling block that also needs to handle them
+	public static void main(String ...args)throws IOException {
+		ConstructorInput myObj1=new ConstructorInput();
+		// Calling method display() for myObj1
+		myObj1.display();
+		ConstructorInput myObj2=new ConstructorInput();
+		// Calling method display() for myObj2
+		myObj2.display();
+	}
+}
+
+
+==================================================================================
+Exercise1
+===================================================================================
+// Write a program to declare two numbers as instance members, initialize them by taking user input in a method/constructor //and also create a add method for addition of those two numbers. 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+class Exercise1 {
+  int x;
+  int y;
+  //Using BufferedReader
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  Exercise1()throws IOException{
+    System.out.println("Enter x value:");
+    x = Integer.parseInt(br.readLine());
+    System.out.println("Enter y value:");
+    y = Integer.parseInt(br.readLine());
+  }
+  public void add(){
+    System.out.println("The addition of "+x+" and "+y+" is: "+(x+y));
+  }
+
+  public static void main(String[] args)throws IOException{
+    Exercise1  obj = new Exercise1();
+    obj.add();
+  }
+}
+
+===============================================================
+Exercise 2
+===============================================================
+// Create an Employee Management Application initializing 3 Employee objects by taking input from user and printing the details.
+//Hint: Refer Student Application. 
+// Main Class
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Exercise2 {
+  String name;
+  int age;
+  float height;
+  static String company = "BitLabs";
+
+  BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+
+  Exercise2()throws IOException{
+    System.out.println("Enter name: ");
+    name = buffer.readLine();
+    System.out.println("Enter age: ");
+    age = Integer.parseInt(buffer.readLine());
+    System.out.println("Enter height: ");
+    height = Float.parseFloat(buffer.readLine());
+  }
+
+  public void display(){
+    System.out.println("Name : "+name+"\n"+"Age : "+age+"\n"+"Height : "+height+"\n"+"Company : "+company);
+    System.out.println();
+  }
+
+
+// Employee {
+  public static void main(String[] args)throws IOException{
+
+    Exercise2 emp1 = new Exercise2();
+    emp1.display();
+    Exercise2 emp2 = new Exercise2();
+    emp2.display();
+    Exercise2 emp3 = new Exercise2();
+    emp3.display();
+  }
+}
+
+===========================================================================
+Sample 1 
+==========================================================================
+// Complete and execute this java program to take input in Constructor using BufferedReader class
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+ public class Sample1 {
+    	String name;
+	String favourite_book;
+	
+	//Create BufferedReader object
+    BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+	 // Declare constructor that throws IOException and write code to input your name and favourite book
+	  
+	Sample1()throws IOException{
+    System.out.println("Enter name: ");
+    name = buffer.readLine();
+    System.out.println("Enter favourite book: ");
+    favourite_book = buffer.readLine();
+  }
+	//Instance method
+	public void display() {
+		//Write code here to display name and favourite book
+    System.out.println("Name of book: "+name+"\n"+"Favourite book : "+favourite_book);
+	}
+	
+	public static void main(String ...args)throws IOException {
+		// Create object and call method
+    Sample1 book = new Sample1();
+    book.display();
+	}
+}
+
+=======================================================================================
+Sample 2
+=======================================================================================
+// Complete and execute this java program for Student Application
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+public class Sample2 {  
+    // Declaring Instance variables
+    	int roll_no;
+   	String name;
+	float marks;
+	// Declaring static variable
+	static String course="Java";
+	
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	
+	Sample2()throws IOException {
+	System.out.println("Enter roll_no");
+	// Take roll_no as user input
+    roll_no = Integer.parseInt(br.readLine());
+	System.out.println("Enter name");
+	// Take name as user input
+    name = br.readLine();
+	System.out.println("Enter marks");
+	// Take marks as user input
+    marks = Float.parseFloat(br.readLine());
+	}
+	//Instance Method
+	public void display(){
+	System.out.println(roll_no+" "+name+" "+marks+" "+course);
+	}
+	public static void main(String ...args)throws IOException
+	{
+		Sample2 s1=new Sample2();
+		s1.display();
+		Sample2 s2=new Sample2();
+		s2.display();
+	}
+}
+
+===============================================================================
+StudentApp
+================================================================================
+// Java Application for Student Application
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+public class StudentApp {  
+    // Declaring Instance variables
+    int roll_no;
+    String name;
+	float marks;
+	// Declaring static variable
+	static String college_name="IIT";
+	
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	
+	StudentApp()throws IOException {
+	System.out.println("Enter roll_no");
+	//Converting roll_no entered as String into int using Integer.parseInt()
+	roll_no=Integer.parseInt(br.readLine());
+	System.out.println("Enter name");
+	name=br.readLine();
+	System.out.println("Enter marks");
+	// Converting marks entered as String into float using Float.parseFloat()
+	marks=Float.parseFloat(br.readLine());
+	}
+	//Instance Method
+	public void display()
+	{
+	// Declaring a Local variable
+	int x=10;
+	System.out.println(roll_no+" "+name+" "+marks+" "+college_name);
+	}
+	public static void main(String ...args)throws IOException
+	{
+		StudentApp s1=new StudentApp();
+		s1.display();
+		StudentApp s2=new StudentApp();
+		s2.display();
+	}
+}

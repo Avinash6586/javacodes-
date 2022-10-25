@@ -1,0 +1,238 @@
+JFM1T8_Assignment
+============================================================
+Int to String
+============================================================
+/*  JFM1T8_Assignment1:
+
+    Write a program to convert an int variable to String using an inbuilt function of String class and print the char at index position 2.
+    Prompt the user input from the terminal.
+    
+    Sample input: 54321
+    
+    Expected output: char at index position 2 = 3
+*/
+
+import java.util.Scanner;
+
+public class IntToString {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declare int type variable
+    int number;
+    String index;
+//take input from user
+    System.out.print("Enter a number: ");
+    number = sc.nextInt();
+//converting integer to string using toString method
+    index = Integer.toString(number);
+//use inbuilt function to print index position
+    System.out.println("char at index position 2 = "+index.charAt(2));
+//print result
+  }
+}
+
+=======================================================================
+Palindrome
+==========================================================================
+/*  JFM1T8_Assignment4:
+
+    Write a program to check whether a string is a Palindrome.
+    Prompt the user input from the terminal.
+    
+    Sample input: Malayalam
+    
+    Expected output: Malayalam is a Palindrome
+*/
+
+import java.util.Scanner;
+
+public class Palindrome {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declare varible
+    System.out.print("Enter string: ");
+//take input from user
+    String palindrome = sc.nextLine();
+    String rev = "";
+/* 
+   divide the whole string into two halves and compare each character in the 
+   first half with each character in the second half in reverse.  
+   If both are equal then it is a palindrome else print it is not a palindrome 
+*/
+    for(int i=palindrome.length()-1;i>=0;i--){
+      rev = rev+palindrome.charAt(i);
+    }
+    if((palindrome.toLowerCase()).equals(rev.toLowerCase())){
+      System.out.println(rev+" is palindrome");
+    }
+    else{
+      System.out.println(rev+" is not palindrome");
+    }
+  }
+}
+
+===================================================================================
+Reverse String
+====================================================================================
+/*  JFM1T8_Assignment5:
+
+    Write a program to reverse a string using StringBuffer. Reverse entire sentence in string and also reverse each word in the string. 
+    Prompt the user input from the terminal.
+    
+    Sample input: Learning made easy at bitLabs
+    
+    Expected output:
+    reversing entire string: sbaLtib ta ysae edam gninraeL
+    reversing each word at its place: gninraeL edam ysae ta sbaLtib  
+*/
+
+import java.util.Scanner;
+
+public class ReverseString {
+  public static void main(String[] args){
+//main method
+
+//declare variables and take input from user
+    ReverseString rv = new ReverseString();
+//creat stringbuffer object for string reversing
+    String input = "Learning made easy at bitlabs";
+//reverse input string
+    String rev = "";
+//print entire string result
+    for(int i=input.length()-1;i>=0;i--){
+      rev = rev+input.charAt(i);
+    }
+//call reverWordInMyString method
+    
+    System.out.println("Reversing entire String: "+rev);
+    rv.reverWordInMyString(input);
+/* 
+   Use split() method of String class splits
+   a string in several strings based on the
+   delimiter passed as an argument to it
+*/
+
+
+/* 
+   Use charAt() function returns the character
+   at the given position in a string
+*/
+
+//print reverse each word string result
+    
+  }
+  void reverWordInMyString(String in){
+    String a[] = in.split("\\s");
+    String reve="";
+    for(int i=0;i<a.length;i++){
+      String temp = a[i];
+      for(int j=temp.length()-1;j>=0;j--){
+        reve = reve+temp.charAt(j);
+      }
+    }
+    System.out.println("Reversing each word at it's place: "+reve);
+  }
+}
+
+================================================================================
+SubString
+================================================================================
+/*  JFM1T8_Assignment2:
+
+    Write a program to find a substring in a string using an inbuilt method of String class.
+    Prompt the user input from the terminal.
+  
+    Sample input: Learning made easy at bitLabs
+    Enter search string : bitLabs
+  
+    Expected output: bitLabs is found
+  
+    Enter search string: bitlab
+    Expected output: bitlab is not found
+*/
+
+import java.util.Scanner;
+
+public class SubStringWithInbuilt {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declare variables
+    System.out.print("Enter string: ");
+    String info = sc.nextLine();
+//take input from user
+    for(int i=0;i<2;i++){
+      System.out.print("Enter search string: ");
+      String search = sc.nextLine();
+      if(info.contains(search)){
+      System.out.println(search+" is found");
+    }
+    else{
+      System.out.println(search+" is not found");
+    }
+    }
+//check if the string contains substring or not if contains print found else print not found
+    
+  }
+}
+
+=======================================================================================
+SubString Without Inbuilt
+=======================================================================================
+/*  JFM1T8_Assignment3:
+
+    Write a program to find a substring in a string without using an inbuilt method of String class.
+    Prompt the user input from the terminal.
+    
+    Sample input: Learning made easy at bitLabs
+    Enter search string: bitLabs
+    
+    Expected output: bitLabs is found
+    
+    Enter search string: bitlab
+    Expected output: bitlab is not found
+
+*/
+
+import java.util.Scanner;
+
+public class SubStringWithoutInbuilt {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declare variables
+    SubStringWithoutInbuilt obj = new SubStringWithoutInbuilt();
+    System.out.print("Enter string: ");
+    String input = sc.nextLine();
+    
+//take input from user
+    
+//compare two strings if the search string found or not without using inbuilt method isSubString()
+
+//creat isSubString method in that declare variable 
+
+//check two strings if the search string is present then return true else return false
+    obj.isSubString(input);
+    sc.close();
+  
+  }
+  void isSubString(String in){
+    Scanner sc = new Scanner(System.in);
+    String a[] = in.split("\\s");
+    int count=0;
+    System.out.print("Enter search string: ");
+    String search = sc.nextLine();
+    for(int i=0;i<a.length;i++){
+      if(a[i].equals(search)){
+        System.out.println(search+" is found");
+        count++;
+      }
+    }
+    if(count==0){
+      System.out.println(search+" is not found");
+    }
+    sc.close();
+  }
+}

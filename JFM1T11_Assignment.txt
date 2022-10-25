@@ -1,0 +1,371 @@
+Ascending Order
+================================================================================
+/* JFM1T11_Assignment4 :
+
+   Write a program to sort an array of numbers in ascending order by comparing each number with every other number in 
+   an array so that after each pass/iteration the smallest element reaches at it’s correct position. 
+
+   Prompt the user input from the terminal.
+   
+   Sample Input: 4,6,3,9,10
+   
+   Expected Output: 10,9,6,4,3
+
+ */
+
+import java.util.Scanner;
+
+public class AscendingOrder {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//take input from user
+    int a[] = new int[5];
+    int temp,i,j;
+    int n = a.length;
+//check input element numbers and printing all numbers using for loop
+    System.out.println("Enter values:");
+    for(i=0;i<n;i++){
+      a[i] = sc.nextInt();
+    }
+    System.out.println("Elements before sorting:");
+//check all elements using for loop
+    for(i=0;i<n;i++){
+      System.out.print(a[i]+",");
+    }
+    System.out.println();
+//check if first number is greater than the second number or not if true then swap
+//check and print result
+    for(i=0;i<n;i++){
+      for(j=i+1;j<n;j++){
+        if(a[i]<a[j]){
+          temp = a[i];
+          a[i] = a[j];
+          a[j] = temp;
+        }
+      }
+    }
+    System.out.println("Elements after sorting:");
+    for(i=0;i<n;i++){
+      System.out.print(a[i]+",");
+    }
+  }
+}
+
+=====================================================================================
+Binary Search
+=====================================================================================
+/* JFM1T11_Assignment2:
+
+   Write a program to execute the search of a number in a sorted array following the below logic: 
+   If the target element is greater than middle element then you go to the middle of the right of the remaining numbers 
+   or otherwise towards middle of the left of the remaining numbers. 
+   Continue until the number is either found or not found.
+   Prompt the user input from the terminal.
+   
+   Sample Input: 2,5,10,12,15,20,25,31,40
+   Enter number to search x= 20
+
+   Expected Output: Position of element is : 6
+   
+   Enter number to search x= 26
+   Expected Output: Sorry,Key doesn't exist in the array
+   
+*/
+
+import java.util.Scanner;
+
+public class BinarySearch {
+  public static void main(String[] args){
+//main method 
+    Scanner sc = new Scanner(System.in);
+//Declare variables
+    int a[] = new int[9];
+//take input from user
+    System.out.println("Enter values:");
+    for(int i=0;i<a.length;i++){
+      a[i] = sc.nextInt();
+    }
+    int beg = 0;
+    int end = a.length;
+    int mid = a.length/2;
+//call binarySearch method
+
+//create a method in that declare a variables and initialize l=a.length, beg=0, end=l-1, mid=(beg+end)/2
+//check each number less than or greater than to the mid element
+//if mid element is less than key than it calculates beg and mid
+//if mid is equal to key than it stops and return mid
+//if mid element is greater than key then it calculates end and mid
+//checking beg is greater than end, then mid = 0
+    for(int i=0;i<2;i++){
+      int count=0;
+      System.out.print("Enter number to search x= ");
+      int k = sc.nextInt();
+    for(int j=0;j<a.length;j++){
+      if(a[mid]==k){
+        System.out.println("Position of element is: "+(mid+1));
+        count++;
+        break;
+      }
+      else if(a[mid]>k){
+        end = mid;
+      }
+      else{
+        beg = mid;
+      }
+      mid = (beg+end)/2;
+    }
+     if(count==0){
+       System.out.println("Sorry,Key doesn't exist in the array");
+     } 
+    }
+  }
+}
+
+==========================================================================================
+Find Number
+============================================================================================
+/* JFM1T11_Assignment1:
+
+   Write a program to find a number in an integer array. If found print the number and the array index at which it is found. 
+   Prompt the user input from the terminal.
+   
+   Sample Input: 2,4,6,1,7,8,9
+   Enter number to search x= 9
+
+   Expected Output: 9 found at index 6
+   
+   Enter number to search x= 12
+   Expected Output: Sorry! 12 is not found in array.
+   
+*/
+
+import java.util.Scanner;
+
+public class FindNumberInArray {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declaring variables
+    int a[] = new int[7];
+    int count,j;
+//creating Scanner object
+//take input from user
+    System.out.println("Enter values:");
+    for(int i=0;i<a.length;i++){
+      a[i] = sc.nextInt();
+    }
+//find number in array
+//search the element if found print that position else print not found message
+    for(int i=0;i<2;i++){
+      System.out.print("Enter number to search x= ");
+      int k = sc.nextInt();
+      count=0;
+      for(j=0;j<a.length;j++){
+        if(a[j]==k){
+          System.out.println(a[j]+" found at index "+j);
+          ++count;
+        }
+      }
+      if(count==0){
+        System.out.println("Sorry! "+k+" is not found in array");
+      }
+    }
+    
+  }
+}
+
+============================================================================================
+Insertion Sort
+==============================================================================================
+/* JFM1T11_Assignment3:
+
+   Have you ever arranged the deck of cards, or maybe shirts in your cupboard? What is common between those two things? 
+   Well, you put the next card or shirt into their proper position, or we can say you insert the next element in its 
+   proper position. Write a program to sort an unsorted array of numbers in the same manner.
+   Prompt the user input from the terminal.
+
+   SampleInput: 6,5,4,3,2,1
+   
+   Expected Output: 1,2,3,4,5,6
+
+*/
+
+import java.util.Scanner;
+
+public class InsertionSort {
+
+  public static int[] sort(){
+    Scanner sc = new Scanner(System.in);
+    int arr[] = new int[6];
+    System.out.println("Input:");
+    for(int i=0;i<arr.length;i++){
+      arr[i] = sc.nextInt();
+    }
+    return arr;
+  }
+  
+  public static void main(String[] args){
+//main method
+    InsertionSort obj = new InsertionSort();
+//take input from user
+//create integer array for all elements
+    int a[] = obj.sort();
+//call sort method
+    System.out.println("Elements entered:");
+    for(int i=0;i<a.length;i++){
+      System.out.println(a[i]);
+    }
+    
+//print sorted array
+//create sort method
+//declare variables
+// storing current element whose left side is checked for its correct position 
+//check whether the adjacent element in left side is greater or less than the current element.
+// move the left side element to one position forward.
+ // move current element to its  correct position.
+    int temp;
+    int n=a.length;
+    for(int i=0;i<n;i++){
+      for(int j=i+1;j<n;j++){
+        if(a[i]>a[j]){
+          temp = a[i];
+          a[i] = a[j];
+          a[j] = temp;
+        }
+      }
+    }
+    System.out.println("Sorted elements:");
+    for(int i=0;i<n;i++){
+      System.out.print(a[i]+",");
+    }
+  }
+}
+
+====================================================================================
+Rearrange Position
+====================================================================================
+/*  JFM1T11_Assignment5 :
+
+    Write a program to sort an array containing negative, non-negative and zero values in descending order.
+    Prompt the user input from the terminal.
+    
+    Sample Input: 2,-3,-1,4,-2
+    
+    Expected Output: -3,-2,-1,2,4
+    
+*/
+
+import java.util.Scanner;
+
+public class RearrangePositiveNegative {
+
+  public static int[] descending(){
+    Scanner sc = new Scanner(System.in);
+    int arr[] = new int[5];
+    System.out.println("Input elements:");
+    for(int i=0;i<arr.length;i++){
+      arr[i] = sc.nextInt();
+    }
+    return arr;
+  }
+  
+  public static void main(String[] args){
+//main method
+    RearrangePositiveNegative obj = new RearrangePositiveNegative();
+//take input from user
+    int a[] = obj.descending();
+//call descending method
+    System.out.println("Elements before sorting:");
+//print result
+    for(int i=0;i<a.length;i++){
+      System.out.println(a[i]);
+    }
+//create descending method
+
+//declare and initialize variables
+    int temp;
+    int n = a.length;
+//check each element if the element is less then zero and the both numbers are not equal  then it swaps them
+//increasing elements untill all elements rearranged
+    for(int i=0;i<n;i++){
+      for(int j=i+1;j<n;j++){
+        if(a[i]>a[j]){
+          temp=a[i];
+          a[i]=a[j];
+          a[j]=temp;
+        }
+      }
+    }
+    System.out.println("Elements after sorting:");
+    for(int i=0;i<n;i++){
+      System.out.print(a[i]+",");
+    }
+    
+  }
+}
+
+==================================================================================
+Spliting
+====================================================================================
+/* JFM1T11_Assignment6:
+
+   Write a program to sort an array containing alphabets, special symbols and numbers.
+   Prompt the user input from the terminal.
+   
+   Sample Input: bit01$$Lab02s03!@!!
+   
+   Expected Output: 
+   Characters: bitLabs
+   Numbers: 010203
+   Special characters: $$!@!!
+
+*/
+
+import java.util.Scanner;
+import java.io.*;
+
+public class Spliting  { 
+
+  public StringBuffer splitString(){
+    Scanner sc = new Scanner(System.in);
+    StringBuffer obj = new StringBuffer("");
+    System.out.println("Enter input:");
+    obj.append(sc.nextLine());
+    return obj;
+  }
+  
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//take input from user
+    Spliting sp = new Spliting();
+//call splitString method
+    StringBuffer sb = new StringBuffer(sp.splitString());
+
+//create splitString method in that initialize alpha, num and special to stringBuffer
+//check if the entered string is digit,alpha and special using if condition
+//printing seperatly characters in character, numbers in number and special characters in special character
+    char c[] = new char[sb.length()];
+    for(int i=0;i<c.length;i++){
+      c[i] = sb.charAt(i);
+    }
+    String alph_count="";
+    String num_count="";
+    String spl_count="";
+		for(int i=0;i<c.length;i++){
+		    if(Character.isLetter(sb.charAt(i))){
+		        alph_count = alph_count+sb.charAt(i);
+		    }
+		    else if(Character.isDigit(sb.charAt(i))){
+		        num_count = num_count+sb.charAt(i);
+		    }
+		    else{
+		        spl_count = spl_count+sb.charAt(i);
+		    }
+		}
+		System.out.println("Characters: "+alph_count);
+		System.out.println("Numbers: "+num_count);
+		System.out.println("Special Characters: "+spl_count);
+  }
+}

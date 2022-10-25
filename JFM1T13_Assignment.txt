@@ -1,0 +1,286 @@
+Hash Demo
+===============================================================================
+/*    JFM1T13_Assignment5:  
+
+      Create an application having a Generic HashMap with Empcode  as key and EmpName as value. Display only EmpNames as output. 
+       Prompt the user input from the terminal.
+
+      Sample Input: 
+      Enter Emp code:101
+      Enter Emp Name: Ram
+      Enter another student (y/n)?y
+      Enter Emp code:102
+      Enter Emp Name: Vaibhav
+      Enter another student (y/n)?y
+      Enter Emp code:103
+      Enter Emp Name: Priyanka
+      Enter another student (y/n)?n
+
+      Expected Output: 
+        Ram
+        Vaibhav
+        Priyanka
+       
+*/
+
+import java.util.Scanner;
+import java.util.HashMap;
+
+public class HashDemo {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+    HashMap<Integer,String> hm = new HashMap<Integer,String>();
+    char ch = 'y';
+    int a;
+    String name;
+//declare the HashMap 
+    while(ch!='n'){
+      System.out.print("Enter Emp code: ");
+      a = sc.nextInt();
+      System.out.print("Enter Emp name: ");
+      name = sc.next();
+      hm.put(a,name);
+      System.out.print("Enter another student (y/n)?");
+      ch = sc.next().charAt(0);
+    }
+//create a while loop for user not enter no
+System.out.println();
+//ask for user input for value and key
+
+//add the user inputs to the HashMap
+
+//ask user if they want to enter another student details
+
+//condition to satisfy in order to loop again
+
+//use for each loop to grab Emp code and Emp Name
+
+//print Emp Name
+    System.out.println("Employee names:");
+    for(String i:hm.values()){
+      System.out.println(i);
+    }
+  }
+}
+
+=============================================================================
+Hd Tv Stock
+=============================================================================
+/*  JFM1T13_Assignment4: 
+
+      Write a program to create a class HDTV with the properties: 
+         •	Brandname 
+         •	Size 
+      Create another class having an ArrayList and add 3 objects of HDTV into it. Display HDTV objects in sorted order of size.(Use Comparator) 
+
+     Sample Output:
+     4000 Sony 20
+     2000 LG 26
+     3000 MI 27
+     1000 Samsung 28
+*/
+import java.util.*;
+public class HdTvStock {
+  public static void main(String[] args){
+//main method
+
+//create HdTv class object in arraylist
+    ArrayList<HdTv> al = new ArrayList<HdTv>();
+//add elements to that arraylist
+    al.add(new HdTv(1000,"Samsung",28));
+    al.add(new HdTv(3000,"MI",27));
+    al.add(new HdTv(2000,"LG",26));
+    al.add(new HdTv(4000,"Sony",20));
+//print values on sorted order based on size value
+    Collections.sort(al, new BrandnameComparator());
+//use collection.sort and pass Brandname Comparator as parameters
+    for(HdTv ht:al){
+      System.out.println(ht.cost+" "+ht.Brandname+" "+ht.size);
+    }
+//print result
+
+//create HdTv class in that declare variables and pass variables as parameters
+
+
+//create BrandnameComparator it implements Comparator in that create a compare method pass two parameters for comparing sizes
+
+//access HdTv class objects
+
+//compare sizes and return size
+  }
+}
+
+class HdTv{
+  int cost,size;
+  String Brandname;
+
+  HdTv(int cost,String Brandname,int size){
+    this.cost = cost;
+    this.Brandname = Brandname;
+    this.size = size;
+  }
+}
+
+class BrandnameComparator implements Comparator{
+  public int compare(Object o1,Object o2){
+    HdTv h1 = (HdTv)o1;
+    HdTv h2 = (HdTv)o2;
+
+    return h1.size - h2.size;
+    
+  }
+}
+
+==================================================================================
+Iterator Array
+===================================================================================
+/* JFM1T13_Assignment2:
+
+     Write a program to iterate through all elements in an ArrayDeque.Using iterator method
+     Prompt the user input from the terminal.
+     
+     Sample Input: 12,31,6,23,90
+
+     Expected Output:  
+     ArrayDeque: [12, 31, 6, 23, 90]
+     The iterator values are: 
+     12
+     31
+     6
+     23
+     90
+*/
+
+import java.util.*;
+
+public class IteratorArrayDeque {
+  public static void main(String[] args){
+//create Scanner object
+    Scanner sc = new Scanner(System.in);
+//create an empty ArrayDeque
+    ArrayDeque<Integer> ad = new ArrayDeque<>();
+    int a[] = new int[5];
+    System.out.println("Enter values:");
+    for(int i=0;i<a.length;i++){
+      a[i]=sc.nextInt();
+    }
+//take input from user
+    for(int i=0;i<a.length;i++){
+      ad.add(a[i]);
+    }
+
+    System.out.println("ArrayDeque: "+ad);
+//create an iterator
+    Iterator itr = ad.iterator();
+    System.out.println("The iterator values are:");
+//Display the values after iterating through the Deque 
+    while(itr.hasNext()){
+      System.out.println(itr.next());
+    }
+  }
+}
+
+===============================================================================
+Map Count
+================================================================================
+/*  JFM1T13_Assignment3:
+
+      Write a Java program to count the number of key-value (size) mappings in a map. 
+      Prompt the user input from the terminal.
+
+      Sample Input: 
+      Enter value:20
+      Enter key:bitLabs
+      Enter another student (y/n)?y
+      Enter value:25
+      Enter key:welcomes
+      Enter another student (y/n)?y
+      Enter value:30 
+      Enter key:you
+      Enter another student (y/n)?n
+
+      Expected Output: The size of the map is 3
+*/
+import java.util.*;
+public class MapCount {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declare HashMap object
+    HashMap<String,Integer> hm = new HashMap<String,Integer>();
+    int value,size=0;
+    String key;
+    char ch = 'y';
+//create a while loop for user not enter no
+    while(ch!='n'){
+      System.out.print("Enter value: ");
+      value = sc.nextInt();
+      System.out.print("Enter key: ");
+      key = sc.next();
+      hm.put(key,value);
+      size++;
+      System.out.print("Enter another student (y/n)?");
+      ch = sc.next().charAt(0);
+    }
+//ask for user input for value and key
+    System.out.println();
+//add the user inputs to the HashMap
+
+//ask user if they want to enter another
+
+//condition to satisfy in order to loop again
+
+//print total size as result
+    System.out.println("The size of the map is: "+size);
+    
+  }
+}
+
+======================================================================================
+Priority
+======================================================================================
+/* JFM1T13_Assignment1
+
+     Write a program to create a priority queue, add some colors (string) and print out the elements of the priority queue. 
+     Prompt the user input from the terminal.
+     
+     Sample Input: 
+     Enter how many colors you want: 
+     5
+     Enter Colors: 
+     red
+     white
+     green
+     orange
+     black
+     
+     Expected Output:
+     Elements of the Priority Queue:  black, green, orange, red, white 
+*/
+
+import java.util.*;
+
+public class Priority {
+  public static void main(String[] args){
+//maiin method
+    Scanner sc = new Scanner(System.in);
+//creat Scanner object
+    int colour;
+    System.out.println("Enter how many colours you want:");
+    colour = sc.nextInt();
+//initialize priority queue object
+    PriorityQueue<String> pq = new PriorityQueue<String>(colour);
+//take input from user and add that values to the priority queue object
+    System.out.println("Enter Colours:");
+    for(int i=0;i<colour;i++){
+      pq.add(sc.next());
+    }
+//print result using poll method
+    System.out.print("Elements of the Priority Queue: ");
+    for(String s:pq){
+      System.out.print(s+", ");
+    }
+    System.out.println();
+  }
+}

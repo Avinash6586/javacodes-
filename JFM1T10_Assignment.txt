@@ -1,0 +1,440 @@
+Animal Inheritance
+================================================================
+/*   JFM1T10_Assignment2:
+
+     Create a class Animal that has a method makeSound(). 
+     Then create two subclasses of Animal class: Horse and Cat that extends Animal class and 
+     provide their specific implementation of makeSound() method.
+
+     Sample Output:
+     The animal makes a sound
+     The Horse says: wee wee
+     The Cat says: meow meow
+
+*/
+
+//Add Animal class and Create Sound() method 
+class Animal{
+  public void makeSound(){
+    System.out.println("The animal makes a sound");
+  }
+}
+
+//Add Horse class that extends Animal class
+class Horse extends Animal{
+  public void makeSound(){
+    System.out.println("The Horse says: wee wee");
+  }
+}
+
+//Add Cat class that extends Animal class
+class Cat extends Animal{
+  public void makeSound(){
+    System.out.println("The Cat says: meow meow");
+  }
+}
+
+class  AnimalInheritance {
+ public static void main(String[] args){
+//Add main method here
+
+//Create all 3 Animal objects and add to an array 
+    Animal animal[] = new Animal[3];
+    animal[0] = new Animal();
+    animal[1] = new Horse();
+    animal[2] = new Cat();
+//Loop over the array and print sound it makes
+    for(int i=0;i<3;i++){
+      animal[i].makeSound();
+    }
+ }
+}
+
+=========================================================================
+Area Perimeter
+==========================================================================
+/* JFM1T10_Assignment3:
+
+     Create an abstract class Shape with following data member and methods- 
+     Create data members for height and width.
+     Add getter and setter methods for height and width.
+     Create methods for finding area and perimeter.
+     Create three subclasses Square, Rectangle and EquilateralTriangle that extends Shape class and define both the methods.
+     Write a program that will find the area and perimeter of 3 Shapes and print the details for all. 
+     Prompt the user for the  values to be input from the terminal.
+ 
+     Sample Input:
+     Enter Width of Rectangle in meters
+     10
+     Enter Length of Rectangle in meters
+     5
+     Enter width of Equilateraltriangle
+     15
+     Enter radius of circle
+     60
+
+     Expected Output:
+     Rectangle width: 10.0 meters and length: 5.0 meters
+     Resulting area: 50.0 square meters
+     Resulting perimeter: 30.0 meters 
+
+     EquiTriangle side: 15.0meters
+     Resulting area: 97 square meters
+     Resulting perimeter: 45.0 meters 
+
+     Circle radius : 60.0meters
+     Resulting area: 11310 square meters
+     Resulting perimeter: 377 meters  
+
+*/
+
+import java.util.Scanner;
+import java.lang.Math;
+
+abstract class Shape{
+  int height;
+  int width;
+  float width_equilateral;
+  int radius;
+  
+  abstract public void area();
+  abstract public void perimeter();
+
+}
+
+//Add Square class that extends Shape class
+class Circle extends Shape{
+  public void setRadius(int radius){
+    super.radius = radius;
+  }
+  public void area(){
+    float result = 3.14f*radius*radius;
+    System.out.println("Resulting area: "+result+"square meters");
+  }
+  public void perimeter(){
+    float result = 2*3.14f*radius;
+    System.out.println("Resulting perimeter: "+result+"meters");
+  }
+}
+//Add Rectangle class that extends Shape class
+class Rectangle extends Shape{
+  public void setWidth(int height,int width){
+    super.height = height;
+    super.width = width;
+  }
+  public void area(){
+    float area = height*width;
+    System.out.println("Resulting area: "+area+"square meters");
+  }
+  public void perimeter(){
+    float perimeter = 2*(height+width);
+    System.out.println("Resulting perimeter: "+perimeter+" meters");
+  }
+}
+//Add EquilateralTriangle class that extends Shape class
+class EquilateralTriangle extends Shape{
+  public void setHeight(float width_equilateral){
+    super.width_equilateral = width_equilateral;
+  }
+  public void area(){
+    System.out.println("Resulting area: "+(Math.sqrt(3)/4)*(Math.pow(width_equilateral,2))+" square meters");
+  }
+  public void perimeter(){
+    float perimeter = 3*width_equilateral;
+    System.out.println("Resulting perimeter: "+perimeter+" meters");
+  }
+}
+
+class AreaPerimeter {
+  public static void main(String[] args){
+//Add the main method here and find Area and Perimeter 
+
+//Use the scanner class to provide height and width at execution time
+    Scanner sc = new Scanner(System.in);
+/*
+Scanner s= new Scanner(System.in);
+System.out.println("Enter the height of triangle");
+EquilateralTriangle triangle=new EquilateralTriangle();
+triangle.setHeight(s.nextInt());
+*/
+    System.out.println("Enter width of Rectangle in metres: ");
+    int width = sc.nextInt();
+    System.out.println("Enter length of Rectangle in metres: ");
+    int height = sc.nextInt();
+    System.out.println("Enter width of EquilateralTriangle: ");
+    float width_equilateral = sc.nextFloat();
+    System.out.println("Enter radius of circle: ");
+    int radius = sc.nextInt();
+
+    Circle circle = new Circle();
+    EquilateralTriangle triangle = new EquilateralTriangle();
+    Rectangle rectangle = new Rectangle();
+
+    circle.setRadius(radius);
+    triangle.setHeight(width_equilateral);
+    rectangle.setWidth(height,width);
+    
+    System.out.println("Rectangle width: "+width+"meters and height: "+height+"meters");
+    rectangle.area();
+    rectangle.perimeter();
+    System.out.println("EquiTriangle side : "+width_equilateral+"meters");
+    triangle.area();
+    triangle.perimeter();
+    System.out.println("Circle Radius : "+radius+" meters");
+    circle.area();
+    circle.perimeter();
+    
+  }
+}
+
+============================================================================================
+Constructor Chaining
+=============================================================================================
+/* JFM1T10_Assignment1:
+
+   Write a program to demonstrate Constructor chaining in Java 
+   Add atleast 3 constructors
+
+   Sample Output:
+   Parent class default constructor
+   Child class default constructor
+   Parent class one-argument constructor
+   Child class one-argument constructor
+
+*/
+
+class ConstructorChaining {
+  public static void main(String[] args){
+    Child child = new Child();
+    Child children = new Child("one argument");
+  }
+}
+
+class Parent{
+  String argument;
+  Parent(){
+    System.out.println("Parent class default constructor");
+  }
+  Parent(String arg){
+    this.argument = arg;
+    System.out.println("Parent class "+this.argument+" constructor");
+  }
+}
+
+class Child extends Parent{
+  String argument;
+  Child(){
+    super();
+    System.out.println("Child class default constructor");
+  }
+  Child(String arg){
+    super("one argument");
+    this.argument = arg;
+    System.out.println("Child class "+this.argument+" constructor");
+  }
+}
+
+==================================================================================
+Protected Method
+==================================================================================
+/* JFM1T10_Assignment5:
+
+     Write a program to access a protected method of a class in different package. 
+
+     Sample Output:
+     Try to access the protected method outside the package using inheritance
+    
+*/
+
+//Create a folder called package1
+
+//Inside the folder create a Demo class with the package name as package1. In that define a protected variable
+
+//Outside the folder create ProtectedMethod class and import the package1
+import package1.Demo;
+
+class ProtectedMethod extends Demo{ 
+  public static void main(String[] args){
+// Define main method 
+    ProtectedMethod example = new ProtectedMethod();
+// Access and print x of Demo class 
+    example.x = "Try to access the protected method outside the package using inheritance";
+
+    System.out.println(example.x);
+  }
+} 
+
+=================================================================================================
+Stack Operations
+=================================================================================================
+/* JFM1T10_Assignment4:
+
+     Create an interface named MyStack in package MyCollection with following methods- 
+     void push(int I) 
+     int pop() 
+     Create two sub classes inheriting the MyStack interface.  
+   1.class FixedStack that can accept a fixed numbers of integers. 
+     The size of the Stack will be specified in the constructor. 
+     If the number of integers exceed the size, “Stack overflow” message should be displayed. 
+   2.class VariableStack that can accept numbers more than its size. 
+     The size of the Stack will be specified in the constructor. 
+     If the number of integers exceed the size, the stack should automatically grow to accommodate the new element. 
+     Make a program that checks the implementation of both the classes. 
+     Prompt the user for the  values to be input from the terminal.
+
+     Sample Input:
+     Enter a a few comma separated integers (Ex: 1,7,4)
+     1,2,3,4,5
+
+     Expected Output:
+     Fixed Stack Overflows. Failed to push the integer:4
+     Dynamic Stack Overflow. Increasing the stack length...Done
+     Fixed Stack Overflows. Failed to push the integer:5
+     Dynamic Stack Overflow. Increasing the stack length...Done
+     Printing all elements of Fixed Stack
+     3
+     2
+     1
+     Printing all elements of Dynamic Stack
+     5
+     4
+     3
+     2
+     1
+
+*/
+
+//Create a interface name MyStack
+
+//Add a class FixedStack that implements StackOperations and create a methods push and pop
+
+//Add a class DynamicStack that implements StackOperations and create a methods push and pop
+
+import MyCollection.*;
+import java.io.*;
+class FixedStack implements MyStack{
+  private int stack[]=new int[3];
+  private int tos;
+  private int capacity=stack.length;
+  FixedStack(){
+    tos = -1;
+  }
+  public void push(int i){
+    if(isFull()){
+       System.out.println("Fixed Stack Overflows. Failed to push the integer:" + i);
+     
+    }
+    else{
+    stack[++tos] = i;
+    }
+  }
+  public int pop(){
+    if(isEmpty()){
+      System.out.println("Fixed Stack Underflows");
+     
+    }
+    return stack[tos--];
+  }
+  public int getSize(){
+    return tos+1;
+  }
+  public boolean isFull(){
+    return tos==capacity-1;
+  }
+  public boolean isEmpty(){
+    return tos==-1;
+  }
+  public void printStack(){
+    for(int i=capacity-1;i>=0;i--){
+      System.out.println(stack[i]);
+    }
+  }
+}
+class VariableStack implements MyStack{
+  private int stack[];
+  private int tos;
+  private int capacity;
+  
+  VariableStack(int size){
+    stack = new int[size];
+    tos = -1;
+    capacity = size;
+  }
+  public void push(int i){
+    if(isFull()){
+     int k;
+      capacity = capacity + 1;
+      int newStack[] = new int[capacity];
+      for (k = 0; k < stack.length; k++){
+        newStack[k] = stack[k];
+      }
+      newStack[k] = i;
+      stack = new int[capacity + 1];
+      stack = newStack;
+      tos++;
+      
+      System.out.println("Dynamic Stack Overflow. Increasing the stack length...Done:"); 
+    }
+    else{
+    stack[++tos] = i;
+    }
+  }
+  public int pop(){
+    if(isEmpty()){
+      System.out.println("Dynamic Stack Underflows");
+      return stack[tos];
+    }
+    else{
+    return stack[tos--];
+    }
+  }
+  public boolean isFull(){
+    
+    return tos==stack.length-1;
+  }
+  public boolean isEmpty(){
+    return tos==-1;
+  }
+  public int getSize(){
+    return tos+1;
+  }
+  public void printStack(){
+   
+    for(int i=stack.length-1;i>=0;i--){
+      
+  
+      System.out.println(stack[i]);
+      
+    }
+   
+  }
+}
+class  StackOperations {
+  public static void main(String[] args)throws IOException{
+//Add main method here
+    FixedStack fs = new FixedStack();
+    VariableStack vs = new VariableStack(3);
+    BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter a a few comma separated integers (Ex: 1,7,4)");
+    String input = obj.readLine();
+    String a[] = input.split(",");
+    int b[] = new int[a.length];
+    int c=0,capacity=0;
+    for(String i:a){
+      b[c++] = Integer.parseInt(i);
+      ++capacity;
+    } 
+    System.out.println();
+    
+    
+    for(int i=0;i<a.length;i++){
+      fs.push(b[i]);
+       vs.push(b[i]);
+    }
+  System.out.println("Printing all elements of fixed stack:");
+    fs.printStack();
+    System.out.println("Printing all elements of Variable stack:");
+    vs.printStack();
+    
+  }
+}

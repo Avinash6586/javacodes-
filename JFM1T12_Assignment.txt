@@ -1,0 +1,327 @@
+Copy Array List
+===============================================================================
+/*   JFM1T12_Assignment3:
+
+     Write a program to copy one arraylist into another.
+     Prompt the user input from the terminal.
+     
+     Sample Input:
+     Enter how many numbers you want: 
+     5
+     Enter Number 0
+     5
+     Enter Number 1
+     4
+     Enter Number 2
+     3
+     Enter Number 3
+     2
+     Enter Number 4
+    
+    Expected Output:
+    -----Iterating over the second ArrayList----
+     5
+     4
+     3
+     2
+     1
+
+*/
+
+import java.util.*; 
+import java.util.ArrayList; 
+
+class CopyArrayList  { 
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declare variables
+    int size;
+    System.out.println("Enter how many numbers you want: ");
+    size = sc.nextInt();
+//create Scanner object
+
+//take input from user
+    ArrayList<Integer> al = new ArrayList<Integer>(size);
+// Assign the first reference to second
+    for(int i=0;i<size;i++){
+      System.out.println("Enter Number "+i);
+      al.add(sc.nextInt());
+    }
+    ArrayList<Integer> al_2 = al;
+    
+// Iterat over second ArrayList and print
+    
+    System.out.println(" -----Iterating over the second ArrayList----");
+    for(Integer i:al_2){
+      System.out.println(i);
+    }
+  }
+}
+
+=======================================================================================
+Duplicate
+=======================================================================================
+/*   JFM1T12_Assignment5:
+
+     Write a program to build any collection containing duplicates. Create its copy with all duplicates removed. 
+     Prompt the user input from the terminal.
+     
+     Sample Input:
+     Enter how many numbers you want: 
+     4
+     Enter Number 0
+     4
+     Enter Number 1
+     3
+     Enter Number 2
+      3
+     Enter Number 3
+     4
+     
+     Expected Output:
+     After removing duplicates: [4, 3]
+*/     
+
+import java.util.*; 
+import java.util.ArrayList; 
+
+class Duplicate  { 
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+    int size;
+    System.out.println("Enter how many numbers you want");
+    size = sc.nextInt();
+//create Scanner object 
+    LinkedHashSet<Integer> lhs = new LinkedHashSet<Integer>(size);
+//take input from user
+    for(int i=0;i<size;i++){
+      System.out.println("Enter Number "+i);
+      lhs.add(sc.nextInt());
+    }
+//creat an object of LinkedHashSet class 
+    ArrayList<Integer> al = new ArrayList<Integer>(size);
+//creat an object of ArrayList class and pass LinkedHashSet object
+    al.addAll(lhs);
+//Print result
+    System.out.println("After removing duplicates: "+al);
+  }
+}
+
+=========================================================================================
+Reverse Array 
+=========================================================================================
+/*  JFM1T12_Assignmwnt4:
+
+    Write a Java program to reverse elements in an arraylist.
+    Prompt the user input from the terminal.
+     
+    Sample Input:
+    Enter how many numbers you want: 
+    5
+    Enter Number 0
+    995
+    Enter Number 1
+    367
+    Enter Number 2
+    511
+    Enter Number 3
+    789
+    Enter Number 4
+    111
+    
+    Expected Output:
+    Elements after reversing:111 789 511 367 995  
+
+ */
+
+import java.util.*; 
+import java.util.ArrayList; 
+
+class ReverseArrayList  {  
+  public static void main(String[] args){
+//Take an arraylist as a parameter and returns a reversed arraylist 
+    ReverseArrayList obj = new ReverseArrayList();
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter how many numbers you want");
+    int size = sc.nextInt();
+    ArrayList<Integer> al = new ArrayList<Integer>(size);
+    for(int i=0;i<size;i++){
+      System.out.println("Enter Number "+i);
+      al.add(sc.nextInt());
+    }
+//Arraylist for storing reversed elements
+    ArrayList<Integer> all = obj.reverseArrayList(al);
+//Append the elements in reverse order 
+    obj.printElement(all);
+//Return the reversed arraylist
+
+//Iterate through all the elements and print
+
+//main method
+
+//creat an object of ReverseArrayList class 
+
+//take input from user
+
+//creat an object of ArrayList class
+
+//call reverseArrayList method
+
+//call printElement method
+  }
+  public static ArrayList<Integer> reverseArrayList(ArrayList<Integer> al){
+    ArrayList<Integer> ll = new ArrayList<Integer>(al.size());
+    for(int i=al.size()-1;i>=0;i--){
+      ll.add(al.get(i));
+    }
+    return ll;
+    
+    
+  }
+  public static void printElement(ArrayList<Integer> all){
+    Iterator itr = all.iterator();
+    System.out.print("Elements after reversing: ");
+    while(itr.hasNext()){
+      System.out.print(itr.next()+" ");
+    }
+  }
+}
+
+=========================================================================================
+Searching Element
+==========================================================================================
+/*  JFM1T12_Assignment1:
+
+    Write a program to search an element in an arraylist.  
+    Prompt the user input from the terminal.
+    
+    Sample Input 1:
+    Enter how many Elements you want: 
+    5
+    Enter Elements: 
+    Red
+    Green
+    Orange
+    White
+    Black
+    
+    Enter Search Element: 
+    Red
+    
+    Expected Output:
+    Red Element is present
+
+    Sample Input 2: 
+    Enter Search Element: 
+    yellow
+    
+    Expected Output:
+    yellow Element is not present
+
+*/
+
+import java.util.Scanner;
+import java.util.ArrayList; 
+import java.util.LinkedHashSet;
+
+class SearchingElement {
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+    int size;
+    System.out.println("Enter how many Elements you want");
+    size = sc.nextInt();
+//declare variables
+
+//create scanner object
+
+//take input from user
+
+//creat an object of LinkedHashSet class 
+    LinkedHashSet<String> lhs = new LinkedHashSet<String>(size);
+    System.out.println("Enter Elements:");
+    for(int i=0;i<size+1;i++){
+      lhs.add(sc.nextLine());
+    }
+//check if the search element is present on the list using contains method
+
+//If element found then print element is present else then print element not present
+    for(int i=0;i<2;i++){
+      System.out.println("Enter search element");
+      String element = sc.nextLine();
+      if(lhs.contains(element)){
+        System.out.println(element+" Element is present");
+      }
+      else{
+        System.out.println(element+" Element is not present");
+      }
+    }
+  }
+}
+
+=====================================================================================
+Sort Array List
+====================================================================================
+/*  JFM1T12_Assignment2:
+
+    Write a program to sort a given arraylist of integers in ascending order.   
+    Prompt the user input from the terminal.
+    
+    Sample Input:
+    Enter how many numbers you want: 
+    5
+    Enter Number 0
+    467
+    Enter Number 1
+    342
+    Enter Number 2
+    167
+    Enter Number 3
+    511
+    Enter Number 4
+    204
+    
+    Expected Output:
+    ArrayList After Sorting:
+    167
+    204
+    342
+    467
+    511
+
+*/     
+
+import java.util.*;  
+
+public class SortArrayList  {  
+  public static void main(String[] args){
+//main method
+    Scanner sc = new Scanner(System.in);
+//declare variables
+    int size;
+    System.out.println("Enter how many numbers you want");
+    size = sc.nextInt();
+//create Scanner object
+    ArrayList<Integer> al = new ArrayList<Integer>(size);
+    for(int i=0;i<size;i++){
+      System.out.println("Enter Number "+i);
+      al.add(sc.nextInt());
+    }
+//take input from user
+    Collections.sort(al);
+//create an object of ArrayList class
+
+//sort ArrayList in ascending oeder
+
+//print Array list
+    System.out.println("Array List after sorting:");
+    for(int i:al){
+      System.out.println(i);
+    }
+
+    sc.close();
+    
+  }
+}

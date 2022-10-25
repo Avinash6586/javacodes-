@@ -1,0 +1,248 @@
+College Principle Program
+========================================================
+/* JFM1T9_Assignment4:
+     Extend and enhance the previous inheritance program where collegeName, designation and 
+     work() method are common to all the teachers and declared in the base class in the way
+     that all child classes like MathTeacher, EnglishTeacher and MusicTeacher do not need to 
+     write this code and can use directly from base class. 
+
+     Sample Output:
+     Math Teacher         IIT
+     English Teacher      IIT
+     Music Teacher        IIT
+*/
+
+//Add Teacher class
+class Teacher{
+  public static String collegeName = "IIT";
+  public String designation;
+
+  public void details(String designation){
+    this.designation = designation;
+  }
+  public void work(){
+    System.out.println(this.designation+" \t"+collegeName);
+    
+  }
+  
+}
+
+//Add MathTeacher class
+class MathTeacher extends Teacher{}
+
+//Add EnglishTeacher class
+class EnglishTeacher extends Teacher{}
+
+//Add MusicTeacher class
+class MusicTeacher extends Teacher{}
+
+class CollegePrincipal {
+  public static void main(String[] args){
+//Add the main method here and create all different types of Teacher objects and print there college name designation.
+    MathTeacher math = new MathTeacher();
+    EnglishTeacher english = new EnglishTeacher();
+    MusicTeacher music = new MusicTeacher();
+
+    math.details("MathTeacher");
+    english.details("EnglishTeacher");
+    music.details("MusicTeacher");
+
+    math.work();
+    english.work();
+    music.work();
+  }
+}
+
+===========================================================================
+Computer Teacher
+===========================================================================
+/* JFM1T9_Assignment3:
+     Create a base class Teacher and a sub class ComputerTeacher.
+     class ComputerTeacher extends the designation and collegename properties and work() method from base Teacher class,
+     you need not declare these properties and method in ComputerTeacher sub class .
+     Try accessing these properties using child class object in Main method.
+  
+     Sample Output:
+     Designation       CollegeName
+     ComputerTeacher      IIT
+*/
+
+class Teacher {
+  String designation;
+  String collegeName;
+
+  public void work(){
+    System.out.println("Designation: "+designation);
+    System.out.println("CollegeName: "+collegeName);
+  }
+}
+
+class ComputerTeacher extends Teacher{
+  public void getDetails(String des,String cn){
+    this.designation = des;
+    this.collegeName = cn;
+  }
+  public static void main(String[] args){
+    ComputerTeacher ct = new ComputerTeacher();
+    ct.getDetails("ComputerTeacher","IIT");
+    ct.work();
+  }
+
+}
+
+
+==============================================================================
+Expert Hacker
+===============================================================================
+/*JFM1T9_Assignment2:
+    Write a BankAccount class with members account_number and account_balance  and prevent other class objects 
+    (assuming them as hackers who can steal your confidential information) to access BankAccount details.
+    Steps to Follow:
+    Step1: Create account_number and account_balance as member variables for BankAccount class
+    Step 2: Add setter and getter methods for the above member variables 
+    Prompt the user for the  values to be input from the terminal.
+
+    Sample Input:
+    Enter BankAccount Number : 6789023
+    Enter Current Balance    : 67,000.89
+
+    Expected Output:
+    BankAccount Number : 6789023
+    Current Balance    : 67000.89
+    
+*/
+import java.util.Scanner;
+class BankAccount { 
+//declare account_number , account_balance
+  private int account_number;
+  private float account_balance;
+
+//create getters and setters
+  public void getDetails(int an){
+    this.account_number = an;
+  }
+  public void getAccount(float ab){
+    this.account_balance = ab;
+  }
+
+  public void display(){
+    System.out.println("BankAccount Number : "+this.account_number);
+    System.out.println("Current Balance : "+this.account_balance);
+  }
+   
+}  
+
+public class ExpertHacker { 
+
+  public static void main(String args[]) { 
+
+//main method
+
+//create Scanner object
+    Scanner sc = new Scanner(System.in);
+//Take input from user
+    BankAccount b1 = new BankAccount();
+//Create an object of BankAccount class and set account_number and the account_balance
+    System.out.print("Enter Bank Account Number : ");
+    b1.getDetails(sc.nextInt());
+    System.out.print("Enter Current Balance : ");
+    b1.getAccount(sc.nextFloat());
+// Try accessing fields of BankAcccount class and check whether it's accessible 
+    
+// or not. If not then try accessing it with it’s setter and getter methods. 
+
+// Print account_number and account_balance 
+    System.out.println();
+    b1.display();
+}   
+
+} 
+
+==============================================================================================
+Person Encapsulation
+===============================================================================================
+/*JFM1T9_Assignment1:
+    Write a program applying Encapsulation to age field in Person class that cannot be accessed directly from outside class
+    but can be accessed using setter and getter methods. 
+    Steps to follow:
+    Step1: Add age attribute to the Person class 
+    Step 2: Add setter and getter methods for the age attribute  
+    Prompt the user for the  values to be input from the terminal.
+
+    Sample Input:
+    Enter age: 32
+
+    Expected Output:
+    Your age: 32
+    
+     
+*/
+import java.util.Scanner;
+class Person { 
+//declare age 
+  private int age;
+//create setters and getters
+  public void getAge(int age){
+    this.age = age;
+  }
+
+  public void displayAge(){
+    System.out.println("Your age: "+this.age);
+  }
+    
+}  
+
+class PersonEncapsulation { 
+
+public static void main(String args[]) { 
+
+//main method
+
+//create Scanner object
+  Scanner sc = new Scanner(System.in);
+  Person p1 = new Person();
+//take input from user
+  System.out.print("Enter age: ");
+  p1.getAge(sc.nextInt());
+// Try accessing age field of Person directly and check whether it’s accessible
+// or not.If not then try accessing it with it’s setter and getter methods. 
+
+// Output age  
+  p1.displayAge();
+
+}   
+
+} 
+
+===================================================================================
+Sport
+===================================================================================
+/* JFM1T9_Assignment5:
+	Create an object named obj of the class Main and print the reference to the object using this keyword.
+        
+        Sample Output:
+        Sport name: Football
+*/ 
+      
+
+class  Sport { 
+
+// Create a member variable for Sport name 
+  String name;
+// Set member variable for Sport name 
+  public void getName(String nm){
+    this.name = nm;
+  }
+  public void displayName(){
+    System.out.println("Sport Name: "+this.name);
+  }
+  public static void main(String args[]) { 
+
+// Create object for Sport class 
+  Sport something = new Sport();
+// Print the value of Sport name using "this" reference
+  something.getName("Football");
+  something.displayName();
+} 
+
+} 
