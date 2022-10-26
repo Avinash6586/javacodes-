@@ -1,0 +1,70 @@
+<!--Exercise 2: In this HTML page, do the following exercises. Click Preview link after completion of each excercise to see your output. 
+After completing all questions, submit the assignment to gitHub. -->
+
+<html>
+<link href = "iandj.css" rel="stylesheet">
+<body>
+
+<!-- Exercise 2.1: Display text and apply CSS by using text-decoration property. -->
+<div class = "hello">
+  <p style="text-decoration: overline">This text defines overline text decoration</p>
+  <p style="text-decoration: underline">This text defines underline text decoration</p>
+  <p style="text-decoration: line-through">This text defines line through text decoration</p>
+</div>
+<!-- Exercise 2.2: Display text in paragraphs and apply text transformation property as none, uppercase, lowercase. -->   
+<div class="hello">
+  <p style="text-transform: uppercase"><b>Suriya</b> is a well-known famous kollywood actor. He was born in tamilnadu state and brought up in chennai. He has a younger brother and his name is <b>Karthi.</b></p>
+  <p style="text-transform: lowercase">He faced many ups and downs in his life before becoming a actor and he is now a favourite superstar to all the people in the south region. He also married the love of his love <b>Jyothika</b> in 2008.</p>
+  <p style="text-transform: capitalize">Joel osteen is a well-known famous preacher in America. He administers the lakewood church and a successful writer.His novels got sold every time when it is published and he became the number one Novelist during the year 2015 for most books sold during that year.</p>
+</div>
+<!-- Exercise 2.3:  By using text-indent property of 50px, display text in the paragraph. Use id property to sepate with other text-->  
+<div id="nithya">
+<p style="text-indent: 50px">Nithya Menen(born 8 April 1988) is an Indian actress and singer who works primarily in Malayalam, Telugu,Tamil and Kannada films. Nithya Menen appeared first on-screen as a child, when she was ten, in the English film, Hanuman (1998), playing the younger sister to Tabu's character.</p>
+</div>
+<!-- Exercise 2.4 : Using letter spacing property with a value of 5px display the text. Use id property to sepate with other text-->
+<div id="steven">
+  <p style="letter-spacing: 5px; line-height:50px;word-spacing: 10px">Steven Paul Jobs (February 24, 1955 – October 5, 2011) was an American entrepreneur, industrial designer, business magnate, media proprietor, and investor.</p>
+  <p style=" word-spacing: 10px; letter-spacing: 5px; line-height: 40px">He was the co-founder, chairman, and CEO of Apple; the chairman and majority shareholder of Pixar; a member of The Walt Disney Company's board of directors following its acquisition of Pixar; and the founder, chairman, and CEO of NeXT.</p>
+</div>
+<!-- Exercise 2.5: Apply line height of 30px for the paragraph. Use class property to separate with other paragraph's -->
+<div class="hello">
+  <p style="line-height: 30px">S. Nambi Narayanan (born 12 December 1941) is an Indian aerospace engineer, who worked for the Indian Space Research Organisation (ISRO) and contributed significantly to Indian space program by developing the Vikas rocket engine. He led the team which acquired technology from the French for the Vikas engine used in the first PSLV that India launched. As a senior official at the Indian Space Research Organisation (ISRO), he was in-charge of the cryogenics division.</p><br>
+</div>
+<!-- Exercise 2.6: Create a login form and style the form. Use br tag before creation of login form  -->
+<div id="write">
+  <h2>To create a login form using css</h2>
+  <div id="wrote">
+  <form>
+    <label for="fname">FirstName:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="FirstName"><br>
+    <label for="lname">LastName:</label><br>
+    <input type="text" id="lname" name="lname" placeholder="LastName"><br>
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+</div>        
+<!-- Exercise 2.7: Align text using float left, right property. Use class property to separate with other text-->
+<div class="hello">
+  <div style = "line-height: 40px">
+  <p style="float: left">A rose is either a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and tens of thousands of cultivars.</p>
+<p style="float: right">They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp prickles</p><br>
+  </div>
+</div><br>
+  <br><br><br><br>
+<!-- Exercise 2.8:  Apply styles for the text using absolute and relative positions. Use class property to separate with other text-->
+<div class ="hello">
+  <p class="yup">Text1</p><br>
+  <p class="puy">Text2</p><br>
+  <p class="yap">Text3</p><br>
+</div><br>
+  <br><br><br><br>
+<!-- Exercise 2.9: Display Hello World! with image as the background. -->
+<div id="display">
+  <div id="why">
+  <h1 style="color: white"><b>Hello World!</b></h1>
+  <p style="color: white">Hello World!</p>
+  </div>
+</div>
+
+</body>
+</html>

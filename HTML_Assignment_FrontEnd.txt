@@ -1,0 +1,136 @@
+
+    
+<!--Exercise 1: In this HTML page, do the following exercises. Click Preview link after completion of each excercise to see your output. 
+After completion of each excercise use br tag for line space. After completing all questions, submit the assignment to GitHub. -->
+
+<html>
+  <head>
+    <title>Assignment</title>
+  </head>
+<body>
+
+<!--Exercise 1.1: Using six heading tags display names of fruits. Logic is the more you like the fruit the bigger it should be.--> 
+  <h1>Fruits</h1>
+<h1>Mango</h1>
+<h2>Orange</h2>
+<h3>Kiwi</h3>
+<h4>Banana</h4> 
+<h5>Pome Granate</h5>
+<h6>Water Melon</h6>
+<!--Exercise 1.2:  Describe about your family with each one’s name as heading followed by a three to four lines paragraph about them.--> 
+  <h1>About Family</h1>
+<h2>Father</h2>
+  <p>My father's name is <strong>Vijaya Babu</strong>. He is a daily wage worker. He struggles a lot to give us what we need. He has two elder sisters and elder brothers.</p>
+<h2>Mother</h2>  
+  <p>My mother's name is <strong>Anuradha</strong>. She is a nurse. She spends most of her time in the hospital. She goes early in the morning to the hospital and comes by night. She caes us a lot.</p>
+
+<h2>Brother</h2>
+  <p>I have a elder brother and his name is <strong>Girish</strong>. Currently he is doing his M.tech in SRM University, Amaravati. He got a good sense of humour.</p>
+<!--Exercise 1.3: Display ordered list of Phone brands you prioritise.-->
+  <h3>Phone Brands I prioritise:</h3>
+<ol>
+  <li>Apple</li>
+  <li>Samsung</li>
+  <li>OnePlus</li>
+  <li>Xiaomi</li>
+  <li>Vivo</li>
+</ol>
+<!--Exercise 1.4: Display unordered list of cars you prefer.--> 
+<h3>Cars I prefer:</h3>
+  <ul>
+    <li>Benz</li>
+    <li>Audi</li>
+    <li>Kia</li>
+    <li>Swift</li>
+  </ul>
+<!--Exercise 1.5: Describe any five brands of soft drinks which you like the most used and use dd,dt,dl tags to five brands-->
+<h3>Five Brands of soft drinks which I like:</h3>  
+  <dl>
+    <dt>Thums Up</dt>
+    <dd>Black soft drink</dd>
+    <dt>Red Bull</dt>
+    <dd>Energy drink</dd>
+    <dt>Coco-Cola</dt>
+    <dd>Chilled drink</dd>
+  </dl>
+<!--Exercise 1.6: Display any Image of Car in a web page and add alternate text for image.--> 
+  <h2>Car</h2>
+<img src = "car.jpg" alt = "Image of car">
+<!--Exercise 1.7: Display five people's names along with their age and city in a tabular format.-->
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Avinash</td>
+    <td>21</td>
+    <td>Vijayawada</td>
+  </tr>
+  <tr>
+    <td>Rajeev</td>
+    <td>21</td>
+    <td>Nunna</td>
+  </tr>
+  <tr>
+    <td>Rakesh</td>
+    <td>22</td>
+    <td>Vijayawada</td>
+  </tr>
+  <tr>
+    <td>Vijay</td>
+    <td>21</td>
+    <td>PedhaVadlapudi</td>
+  </tr>
+  <tr>
+    <td>Sasanka</td>
+    <td>21</td>
+    <td>Gollapudi</td>
+  </tr>
+</table>
+<!--Exercise 1.8: Create two html links to navigate to YouTube and bitLabs website.-->
+  <h2>HTML links</h2>
+<p>Click on <a href = "https://www.youtube.com/" target = "_blank">Youtube</a> to get youtube homepage</p>
+<p>Click on <a href = "https://bitlabs.talentlms.com/index" target = "_blank">bitLabs</a> to get bitLabs </p>
+<!--Exercise 1.9: Describe any smart phone with image and features by using HTML Tags.-->
+<h2>Smart Phone</h2>
+  <h3>Apple</h3>
+  <img src = "phone.jpg">
+  <h4>Features:</h4>
+  <p>
+    <ul>
+      <li>Super Retina XDR display</li>
+      <li>5G Enabled phone</li>
+      <li>All-screen OLED display</li>
+      <li>Fingerprint resistant oleophobic coating scrreen</li>
+    </ul>
+  </p>
+<!--Exercise 1.10: Create a sample bill in table format.-->
+<h2>Bill</h2>
+  <table>
+    <tr>
+      <th>Items</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Shirt</td>
+      <td>650</td>
+    </tr>
+    <tr>
+      <td>Pant</td>
+      <td>750</td>
+    </tr>
+    <tr>
+      <td>Dungarees</td>
+      <td>2500</td>
+    </tr>
+    <tr>
+      <td>Leather Jacket</td>
+      <td>1400</td>
+    </tr>
+  </table>
+<!--Click on preview link to see output of all exercises and push into GitHub-->
+
+</body>
+</html>

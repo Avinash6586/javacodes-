@@ -1,0 +1,99 @@
+
+<!--Exercise 1: In this HTML page, do the following exercises. Click Preview link after completion of each excercise to see your output. 
+After completion of each excercise use br tag for line space. After completing all questions, submit the assignment to gitHub. -->
+
+<html>
+  <head>
+    <title>Assignment1</title>
+  </head>
+  <link href = "handp.css" rel = "stylesheet">
+  <link href = "alink.css" rel = "stylesheet">
+  <style>
+    p{
+      color: red;
+    }
+    #boom{
+      font-weight: bold;
+      background-color: #ccc;
+      border: 5px solid black;
+      border-radius: 20px;
+    }
+    #vij{
+      background-color: red;
+      color: yellow;
+      font-family: "Times New Roman";
+      font-weight: bold;
+    }
+    #hyd{
+      background-color: yellow;
+      color: red;
+      font-family: "Verdana";
+      font-weight: bold;
+    }
+    #vzg{
+      background-color: hotpink;
+      color: purple;
+      font-family: "Georgia";
+      font-weight: bold;
+    }
+    .city{
+      background-color: black;
+      color: orange;
+      font-family: "Arial";
+    }
+    div ol{
+      border: 5px solid black;
+      border-radius: 10px;
+      background-color: gray;
+      color: black;
+    }
+  </style>
+<body>
+
+<!--Exercise 1.1:  Write a sentence and display text in red colour with inline style for the body element  -->
+  <div>
+<p style: "color:red">This paragraph comes in colour red<br></p>
+  </div>
+<!--Exercise 1.2:  Write another sentence and use red coloured text in the paragraph using Internal style. -->
+<p>This is second paragraph<br></p>
+<!--Exercise 1.3:  Create a heading and a paragraph under it. Display text of heading and paragraph tags in different color and font size using external CSS  -->  
+<h3 class="model">Heading<br></h3>
+  <p id="para">Colour will change using .css file <br></p>
+<!-- Exercise 1.4: Display "My Cities" as a main heading and apply css using id attribute such as changing background color, font color and font family. Display city names as a side headdings and display paragraph about city under each city name. 
+apply css for paragraph's using class attribute such as line height, font color, font-family and font size etc. -->
+<div id = "boom">
+  <h2 style = "text-align: center"><u>My Cities</u></h2>
+  <div>
+  <h3 id = "vij"><u>Vijayawada:</u></h3>
+  <p class = "city"> <b>Vijayawada</b> is famous for rowdism, gang leaders, politics, celebrities, punugulu and so on. Vijayawada is famous for it's unique culture.The famous places in vijayawadda are Gunadala, Lutheran church, Undavalli caves, and few famous hotels. Vijayawada is famous for movie lovers.</p></div>
+  <div>
+    <h3 id = "hyd"><u>Hyderabad:</u></h3>
+    <p class = "city"><b>Hyderabad</b> has many historical places like Charminar, Golconda fort, Tank bund etc..., . It is famous for it's unique style of biryani making. Hyderabad got many celebrities. The city contains Annapurna studios, Ramanaidu studios, Vyjayanthi studios etc. Most of the shooting take place in hyderabad.</p>
+  </div>
+  <div>
+    <h3 id = "vzg"><u>Visakhapatnam:</u></h3>
+    <p class = "city"><b>Vizag</b> is famous for RK beach and for the famous Hudud tsunami. It is a shooting destination for many movie lovers. Vizag contains a village called Araku which is famous for it's cool climate. Many people from different countries visit this place. VIzayanagaram is also a part of Vizag. It is famous for it's history.<br></p>
+  </div>
+</div>
+<!--Exercise 1.5: Create an ordered list and change the background colour to yellow for the selected list items using descendent selectors. -->
+<div>
+  <ol>
+  <li>Mango</li>
+  <li>Orange</li>
+  <li>Papaya</li>
+  <li>Watermelon</li>
+  <li>PomeGranate</li>
+</ol><br>
+</div>
+<!--Exercise 1.6: Create 3 links and using pseudo selector, change the colours of the link when it is active, visited, hover. -->
+<div>
+  <p>Click on<a href = "https://www.youtube.com/" target = "_blank">Youtube</a>to get access to Youtube</p>
+  <p>Click on <a href = "https://www.wikipedia.org/" target = "_blank">Wikipedia</a>to get access to homepage</p>
+  <p>Click on <a href = "https://www.google.co.in/" target = "_blank">Google</a>to get google search bar</p>
+</div>
+</body>
+</html>
+
+
+
+ 

@@ -1,0 +1,51 @@
+<!--Exercise 1: In this HTML page, do the following exercises. Click Preview link after completion of each excercise to see your output. 
+After completing all questions, submit the assignment to gitHub. -->
+
+<html>
+  <link href = "candi.css" rel = "stylesheet">
+<body>
+
+
+<!-- Exercise 1.1:  Use six heading tags to display the names of fruits and change the colour of the fruit accordingly.-->
+<h1 style="color: tomato">Mango</h1>
+  <h2 style="color: orange">Orange</h2>
+  <h3 style="color: hotpink">Banana</h3>
+  <h4 style="color: purple">Watermelon</h4>
+  <h5 style="color: yellow">PomeGranate</h5>
+  <h6 style="color: blue">Pineapple</h6>
+<!-- Exercise 1.2: Display text in the heading and para by changing the font size, font-weight. -->
+<div id="weight">
+  <h2 class ="mara">Paragraph text</h2>
+  <p id="ara"><b>Suriya</b> is a well-known famous kollywood actor. He was born in tamilnadu state and brought up in chennai. He has a younger brother and his name is <b>Karthi.</b> He faced many ups and downs in his life before becoming a actor and he is now a favourite superstar to all the people in the south region. He also married the love of his love <b>Jyothika</b> in 2008.</p></div>
+<!-- Exercise 1.3: Display text in the heading and para using “class” attribute in CSS. -->
+<div id="joel">
+<h2 class="para">New Paragraph</h2>
+  <p class = "aura">Joel osteen is a well-known famous preacher in America. He administers the lakewood church and a successful writer.His novels got sold every time when it is published and he became the number one Novelist during the year 2015 for most books sold during that year.</p>
+</div>
+<!-- Exercise 1.4: Apply CSS for the HTML elements using “class” and “Id” attributes. -->
+<div id="sample">
+<h3 class = "heading">Sample Heading</h3>
+  <p id="nill">Applying changes to the para using class and id attributes.</p></div>
+<!-- Exercise 1.5: Display a para graph and apply margin (right, left, bottom, top) property. use id property for this paragraph-->
+<div>
+  <p id="sara">
+    Nithya Menen(born 8 April 1988) is an Indian actress and singer who works primarily in Malayalam, Telugu,Tamil and Kannada films. Nithya Menen appeared first on-screen as a child, when she was ten, in the English film, Hanuman (1998), playing the younger sister to Tabu's character. She started her acting career at the age of 17 by appearing in a supporting role in the Kannada film 7 O' Clock, which was released in 2006. She made her debut in leading roles in Malayalam with Aakasha Gopuram (2008).
+  </p>
+</div>
+<!-- Exercise 1.6:Display a para with text and change text colour to red. use id or class property to separate with other paragraph's-->
+<p id = "param">
+  Steven Paul Jobs (February 24, 1955 – October 5, 2011) was an American entrepreneur, industrial designer, business magnate, media proprietor, and investor. He was the co-founder, chairman, and CEO of Apple; the chairman and majority shareholder of Pixar; a member of The Walt Disney Company's board of directors following its acquisition of Pixar; and the founder, chairman, and CEO of NeXT. He is widely recognized as a pioneer of the personal computer revolution of the 1970s and 1980s, along with his early business partner and fellow Apple co-founder Steve Wozniak.
+</p>
+<!-- Exercise 1.7: Display text by using text-alignment property (Center, right, left).-->
+<div class="city">
+  <h1>Text align property</h1>
+  <p id="noah">S. Nambi Narayanan (born 12 December 1941) is an Indian aerospace engineer, who worked for the Indian Space Research Organisation (ISRO) and contributed significantly to Indian space program by developing the Vikas rocket engine.</p><br>
+  <p id="ark">He led the team which acquired technology from the French for the Vikas engine used in the first PSLV that India launched. As a senior official at the Indian Space Research Organisation (ISRO), he was in-charge of the cryogenics division.</p>
+  <p id="ship">[6] He was awarded the Padma Bhushan, India's third-highest civilian award, in March 2019.[7]
+</p>
+</div>
+<!-- Exercise 1.8: Display a link with background colour as light Gray with navigation to google page.-->
+<p id="search">Click on<a href = "https://www.google.co.in/"> Google</a> to access google page</p>
+
+</body>
+</html>

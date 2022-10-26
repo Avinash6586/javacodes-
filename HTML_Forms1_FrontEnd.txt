@@ -1,0 +1,90 @@
+<!--Exercise 2: In this HTML page, Create a student login form which contains 
+Student Details text as the caption student id, student name, student email, Branch, Year, take radio button for male/female and Submit/Login button.
+After completion of this excercise click on preview link to see your output and submit the assignment to gitHub. -->
+
+<html>
+  <style>
+    input[type="text"],select,input[type="email"]{
+      width: 500px;
+      margin: 30px;
+      border-radius: 5px;
+      border: none;
+      padding: 10px;
+    }
+    input[type="radio"]{
+      margin: 30px;
+      width: 50px;
+    }
+    input[type="submit"]{
+      width: 30%;
+      margin: 30px;
+      border-radius: 5px;
+      border: none;
+      padding: 10px; 
+      color: white;
+      background-color: green;
+    }
+    fieldset{
+      background-color: aquamarine;
+    }
+    div{
+      border: none;
+      border-radius: 5px;
+      background-color: tomato;
+      padding: 20px;
+      margin: 20px;
+    }
+  </style>
+<body>
+<div>
+  <fieldset>
+    <legend><h2>Student Login</h2></legend>
+    <table>
+      <tr>
+        <td><label for="sname">Full Name:</label></td>
+        <td><input type="text" id="sname" name="sname" placeholder="Enter name"></td>
+      </tr>
+    </table><br>
+    <table>
+      <tr>
+        <td><label for="sid">Student id:</td>
+        <td><input type="text" id="sid" name="sid" placeholder="Enter id"></td>
+      </tr>
+    </table><br>
+    <table>
+      <tr>
+        <td><label for="mail">Email:</label></td>
+        <td><input type="email" id="mail" name="mail" placeholder="Enter mail"</td>
+      </tr>
+    </table><br>
+    <table>
+      <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td><input type="radio" id="male" name="male"><label>Male</label></td>
+        <td><input type="radio" id="female" name=female><label>Female</label></td>
+        <td><input type="radio" id="other" name="other"><label>Others</label></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><label for="branch">Branch:</label></td>
+        <td>
+          <select id="branch" name="branch">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="Civil">Civil</option>
+          </select>
+        </td>
+      </tr>
+    </table><br><br>
+    <input type="submit" value="Login">
+  </fieldset>
+</div>        
+        
+        
+</body>
+</html>
+
